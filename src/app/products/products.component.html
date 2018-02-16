@@ -21,6 +21,7 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="col-sm-3  col-sm-3 col-xs-5 plan-detail">
+<<<<<<< HEAD
                                         <p>
                                             <img src="{{data.profile_logo}}">
                                         </p>
@@ -45,6 +46,28 @@
                                         </h3>
                                         <h4 *ngFor="let items of data.price_rate">
                                             {{items}}$
+=======
+                                            <p><img src="{{data.profile_logo}}">                                             
+                                            </p>
+                                            <p><img src="{{data.rating_logo}}"></p>
+                                            
+                                           <!-- <br> <star-rating-comp [size]="'large'" [starType]="'svg'" [rating]="" [(ngModel)]="rating"></star-rating-comp>  -->
+                                           
+                                        </div>
+                                     
+                                <div class="col-sm-3 col-sm-3 col-xs-5 rate plan-detail">
+                                    <h3><b>Plan Details</b></h3>
+                                    <p *ngFor="let item of data.plan_information">
+                                        {{item}}
+                                    </p>
+                                    <!-- <p>{{amount| myCurrency }} </p> -->
+                                    <!-- <p *ngFor="let item of yehDekhana">{{data.plan_information}}</p> -->
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-5 rate">
+                                        <h3><b>Price</b></h3>
+                                    <h4 *ngFor="let items of data.price_rate">
+                                         {{items}}$
+>>>>>>> 3399a5ba166a76ec2c51ead5e3ccf96a61e95ebf
                                         </h4>
                                         <!-- <small>{{data.display_uom}}</small> -->
                                         <!-- <br /> -->
