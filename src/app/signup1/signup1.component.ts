@@ -11,6 +11,7 @@ import { HttpClient, HttpResponse, HttpHeaders } from "@angular/common/http";
 //import { signupdataService } from '../signup1/signupdata.service';
 //import { signupuserdata } from "./signup1data.service";
 import { modelGroupProvider } from '@angular/forms/src/directives/ng_model_group';
+import { TOUCHEND_HIDE_DELAY } from '@angular/material';
 //import {signupuserdata} from './signup1data.service';
 
 @Component({
@@ -20,7 +21,8 @@ import { modelGroupProvider } from '@angular/forms/src/directives/ng_model_group
 })
 
 export class Signup1Component implements OnInit {
-
+private state;
+city;
   signupForm: FormGroup;
  private next:any;
   model:any = {};
@@ -35,6 +37,8 @@ export class Signup1Component implements OnInit {
   constructor(private fb: FormBuilder, private http: HttpClient,private route: ActivatedRoute, private sg: SimpleGlobal) { }
 
   ngOnInit() {
+    this.states();
+   //this.city();
     this.signupForm = this.fb.group({
       'fname': ['', Validators.compose([Validators.required, Validators.pattern(this.normalPattern)])],
      'lname': ['', Validators.compose([Validators.required, Validators.pattern(this.normalPattern)])],
@@ -49,7 +53,54 @@ export class Signup1Component implements OnInit {
      'confirmpassword': ['', Validators.compose([Validators.required])],
     });
   }
- 
+  check() {
+    console.log(this.model)
+}
+
+  states() {
+    // alert(this.premiseID.toString().length)
+    //  alert('hello');
+    // if(this.premiseID&&this.premiseID.toString().length===17) {
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    // this.http.get(Config.api + 'data_against_zipcode/' + this.zip_code + '', { headers: headers }),
+    this.http.get(Config.api + 'state/',{ headers: headers })
+
+        //  this.http.get(Config.api + 'signup/'+ this.zip_code +'', {headers: headers})
+        .subscribe(Res => {
+          //  console.log(Res);
+          //     this.state= Res[0].state;
+          //  Res[0].state=this.model;
+            this.state = Res;
+
+
+            // this.data.changeProducts(this.sg['products']);
+
+        });
+}
+cities() {
+  // alert(this.premiseID.toString().length)
+  //  alert('hello');
+  // if(this.premiseID&&this.premiseID.toString().length===17) {
+   
+
+  let headers = new HttpHeaders();
+  headers.append('Content-Type', 'application/json');
+  // this.http.get(Config.api + 'data_against_zipcode/' + this.zip_code + '', { headers: headers }),
+  this.http.get(Config.api +'city/'+ this.model.state +'/',{ headers: headers })
+
+      //  this.http.get(Config.api + 'signup/'+ this.zip_code +'', {headers: headers})
+      .subscribe(Res => {
+         // console.log(Res);
+          //  this.sQuestion = Res[0].sQuestion;
+          // this.state = Res[0].state;
+          this.city = Res;
+
+
+          // this.data.changeProducts(this.sg['products']);
+
+      });
+}
   
   signupuserdata() {
     //alert('hello');
