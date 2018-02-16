@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map'
+
 import { Config } from "../Config";
 import { ActivatedRoute, Router } from "@angular/router";
 import { SimpleGlobal } from 'ng2-simple-global';
@@ -10,8 +11,9 @@ import { HttpClient, HttpResponse, HttpHeaders } from "@angular/common/http";
 //import { FormControl, FormGroup } from '@angular/forms';
 //import { signupdataService } from '../signup1/signupdata.service';
 //import { signupuserdata } from "./signup1data.service";
-import { modelGroupProvider } from '@angular/forms/src/directives/ng_model_group';
-import { TOUCHEND_HIDE_DELAY } from '@angular/material';
+// import { modelGroupProvider } from '@angular/forms/src/directives/ng_model_group';
+// import { TOUCHEND_HIDE_DELAY } from '@angular/material';
+
 //import {signupuserdata} from './signup1data.service';
 
 @Component({
@@ -21,8 +23,8 @@ import { TOUCHEND_HIDE_DELAY } from '@angular/material';
 })
 
 export class Signup1Component implements OnInit {
-private state;
-city;
+ state;
+  city;
   signupForm: FormGroup;
  private next:any;
   model:any = {};
@@ -38,7 +40,7 @@ city;
 
   ngOnInit() {
     this.states();
-   //this.city();
+  // this.city();
     this.signupForm = this.fb.group({
       'fname': ['', Validators.compose([Validators.required, Validators.pattern(this.normalPattern)])],
      'lname': ['', Validators.compose([Validators.required, Validators.pattern(this.normalPattern)])],
@@ -53,7 +55,10 @@ city;
      'confirmpassword': ['', Validators.compose([Validators.required])],
     });
   }
-  check() {
+  onChange(e) {
+    alert(e)
+  }
+  check(e) {
     console.log(this.model)
 }
 
@@ -87,7 +92,7 @@ cities() {
   let headers = new HttpHeaders();
   headers.append('Content-Type', 'application/json');
   // this.http.get(Config.api + 'data_against_zipcode/' + this.zip_code + '', { headers: headers }),
-  this.http.get(Config.api +'city/'+ this.model.state +'/',{ headers: headers })
+  this.http.get(Config.api +'city/'+this.model +'',{ headers: headers })
 
       //  this.http.get(Config.api + 'signup/'+ this.zip_code +'', {headers: headers})
       .subscribe(Res => {
