@@ -7,6 +7,8 @@ import { Headers, Http, Response } from '@angular/http';
 import { FormControl, FormGroup } from '@angular/forms';
 import { modelGroupProvider } from '@angular/forms/src/directives/ng_model_group';
 import { ActivatedRoute } from '@angular/router';
+import swal from 'sweetalert2';  
+
 @Component({
     selector: 'app-signup',
     templateUrl: 'signup.component.html'
@@ -52,7 +54,9 @@ export class SignupComponent implements OnInit {
         { value: 'Security Question 5' }
     ];
 
-    constructor(private _formBuilder: FormBuilder, private http: HttpClient, private route: ActivatedRoute) { }
+    constructor(private _formBuilder: FormBuilder, private http: HttpClient, private route: ActivatedRoute) {
+       
+    }
     model = {};
     serviceType;
     signup;

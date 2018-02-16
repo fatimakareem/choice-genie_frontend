@@ -8,6 +8,7 @@ import { SimpleGlobal } from 'ng2-simple-global';
 import { ResponseContentType } from '@angular/http/src/enums';
 import { FormBuilder, Validators, NgControl, RadioControlValueAccessor,FormControl, FormGroup } from '@angular/forms';
 import { HttpClient, HttpResponse, HttpHeaders } from "@angular/common/http";
+import swal from 'sweetalert2'; 
 //import { FormControl, FormGroup } from '@angular/forms';
 //import { signupdataService } from '../signup1/signupdata.service';
 //import { signupuserdata } from "./signup1data.service";
@@ -61,7 +62,12 @@ export class Signup1Component implements OnInit {
   check(e) {
     console.log(this.model)
 }
+sweetalertlogin()
+{
+    swal("Register Successflluy!", "Choice Genie", "success")
 
+  
+}
   states() {
     // alert(this.premiseID.toString().length)
     //  alert('hello');

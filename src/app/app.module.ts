@@ -6,6 +6,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { SweetAlertService } from 'ng2-sweetalert2';
 
 // or
 //import { CarouselModule } from 'ngx-bootstrap';
@@ -154,7 +155,8 @@ export class MaterialModule {}
   providers: [
     HomeService,
     SimpleGlobal,
-    DataService
+    DataService,
+    SweetAlertService
   ],
   bootstrap: [AppComponent],
   schemas: [

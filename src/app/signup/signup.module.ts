@@ -9,6 +9,7 @@ import {SignupRoutes} from "./signup.routing";
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatDatepickerModule} from "@angular/material";
 import { HttpClientModule } from '@angular/common/http';
+import { SweetAlertService } from 'ng2-sweetalert2';
 
 @NgModule({
     imports: [
@@ -25,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
         SignupComponent
     ],
     providers: [
-
+        SweetAlertService
     ]
 })
 

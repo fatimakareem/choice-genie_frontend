@@ -7,6 +7,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { SimpleGlobal } from 'ng2-simple-global';
 import { ResponseContentType } from '@angular/http/src/enums';
 import { Console } from '@angular/core/src/console';
+import swal from 'sweetalert2';  
 declare var $: any;
 
 @Component({
@@ -25,6 +26,7 @@ password;
     constructor(private element: ElementRef,private http: Http, private route: ActivatedRoute, private sg: SimpleGlobal) {
         this.nativeElement = element.nativeElement;
         this.sidebarVisible = false;
+       
     }
 
     ngOnInit() {
@@ -36,6 +38,12 @@ password;
             $('.card').removeClass('card-hidden');
         }, 700);
     }
+    sweetalertlogin()
+{
+    swal("Login Successflluy!", "CHoice Geni", "success")
+
+  
+}
     login() {
        
         // this.route.params.subscribe(params => {
