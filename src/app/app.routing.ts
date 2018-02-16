@@ -55,7 +55,7 @@ export const AppRoutes: Routes = [
               loadChildren: './signup/signup.module#SignupModule'
           },
           {
-            path: 'signup1',
+            path: 'register',
             loadChildren: './signup1/signup1.module#Signup1Module'
         },
           {
@@ -73,7 +73,7 @@ export const AppRoutes: Routes = [
         ]
     },
 
-    {path: "about", component: AboutComponent},
+    {path: "what-is-ChoiceGenie", component: AboutComponent},
     {path: "stepper", component: StepperOverviewExample},
     {
         path: 'dashboard',
