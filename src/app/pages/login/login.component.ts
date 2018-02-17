@@ -8,6 +8,8 @@ import { SimpleGlobal } from 'ng2-simple-global';
 import { ResponseContentType } from '@angular/http/src/enums';
 import { Console } from '@angular/core/src/console';
 import swal from 'sweetalert2';  
+import { TOUCHEND_HIDE_DELAY } from '@angular/material';
+import { HomeRoutes } from '../../home/home.routing';
 declare var $: any;
 
 @Component({
@@ -23,7 +25,7 @@ export class LoginComponent implements OnInit {
 username;
 password;
 
-    constructor(private element: ElementRef,private http: Http, private route: ActivatedRoute, private sg: SimpleGlobal) {
+    constructor(public router: Router,private element: ElementRef,private http: Http, private route: ActivatedRoute, private sg: SimpleGlobal) {
         this.nativeElement = element.nativeElement;
         this.sidebarVisible = false;
        
@@ -40,7 +42,30 @@ password;
     }
     sweetalertlogin()
 {
-    swal("Login Successflluy!", "CHoice Geni", "success")
+    swal({   
+        title: "Are you sure?",      
+        type: "success",   
+        showCancelButton: true,   
+        confirmButtonColor: "#DD6B55",
+      
+       confirmButtonText: "OK" ,
+        //closeOnConfirm: false 
+        }), 
+        this.router.navigate(['/home']) 
+        {   
+       
+            swal("Login Successflluy!", "Choice Genie","success");
+            
+        
+        // this.router.navigate(['/home'])  
+
+    };
+    // swal("Login Successflluy!", "Choice Genie","success") 
+    
+    // this.router.navigate(['/home']);
+    // function(){
+    //     window.location.href ='home.html';
+    // };
 
   
 }
