@@ -115,7 +115,7 @@ cities() {
           // this.data.changeProducts(this.sg['products']);
 
       });
-}
+    }}
   
   signupuserdata() {
     //alert('hello');
@@ -153,7 +153,5 @@ cities() {
   }
 
 }
-
-
 
 
