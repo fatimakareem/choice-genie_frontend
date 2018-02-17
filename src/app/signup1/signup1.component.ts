@@ -16,7 +16,7 @@ import swal from 'sweetalert2';
 // import { TOUCHEND_HIDE_DELAY } from '@angular/material';
 
 //import {signupuserdata} from './signup1data.service';
-
+import { AbstractControl } from '@angular/forms';
 @Component({
   selector: 'app-signup1',
   templateUrl: './signup1.component.html',
@@ -37,6 +37,8 @@ export class Signup1Component implements OnInit {
   date = new FormControl(new Date());
 
   emailexist :boolean =false ;
+
+ 
   constructor(private fb: FormBuilder, private http: HttpClient,private route: ActivatedRoute, private sg: SimpleGlobal) { }
 
   ngOnInit() {
@@ -54,6 +56,8 @@ export class Signup1Component implements OnInit {
        'city': ['', Validators.compose([Validators.required, Validators.pattern(this.normalPattern)])],
       'password': ['', Validators.compose([Validators.required, Validators.minLength(6)])],
      'confirmpassword': ['', Validators.compose([Validators.required])],
+    
+     
     });
   }
   onChange(e) {
@@ -92,13 +96,13 @@ sweetalertlogin()
 cities() {
   // alert(this.premiseID.toString().length)
   //  alert('hello');
-  // if(this.premiseID&&this.premiseID.toString().length===17) {
+  if(this.model.state&&this.model.state.toString()) {
    
 
   let headers = new HttpHeaders();
   headers.append('Content-Type', 'application/json');
   // this.http.get(Config.api + 'data_against_zipcode/' + this.zip_code + '', { headers: headers }),
-  this.http.get(Config.api +'city/'+this.model +'',{ headers: headers })
+  this.http.get(Config.api +'city/'+{ "state": this.model.state }+ '/',{ headers: headers })
 
       //  this.http.get(Config.api + 'signup/'+ this.zip_code +'', {headers: headers})
       .subscribe(Res => {
