@@ -153,7 +153,12 @@ cities() {
           // this.data.changeProducts(this.sg['products']);
 
       });
+<<<<<<< HEAD
 }
+=======
+    }}
+  
+>>>>>>> b10e922eb487d775d464eb7f5738a0131419150d
   signupuserdata() {
     //alert('hello');
     console.log("CHOICE GENIE",this.model);
@@ -190,7 +195,5 @@ cities() {
   }
 
 }
-
-
 
 
