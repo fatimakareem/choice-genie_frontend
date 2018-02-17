@@ -4,6 +4,7 @@
   list-style: none;
  }
 
+
 app-my-app:after,
 router-outlet:after,
 app-home:after,
@@ -1318,4 +1319,10 @@ h3 {
   .new-product-holder .mat-form-field {
     width: 100% !important; }
 
+    
+    
 /*# sourceMappingURL=main.css.map */
+.terms-container-wrapper {
+  background: #ffffff;
+  padding-top: 30px;
+}

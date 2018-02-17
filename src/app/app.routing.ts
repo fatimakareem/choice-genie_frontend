@@ -7,6 +7,7 @@ import {CustomerLayoutComponent} from "./layouts/customer/customer-layout.compon
 import {NormalLayoutComponent} from "./layouts/normal/normal-layout.component";
 import {StepperOverviewExample} from "./signup/stepper-overview-example";
 import { LoginComponent } from './pages/login/login.component';
+import { TermsComponent } from './terms/terms.component';
 // import {Signup1Component} from './signup1/signup1.component';
 
 export const AppRoutes: Routes = [
@@ -69,11 +70,16 @@ export const AppRoutes: Routes = [
           {
             path: 'login-cmp',
             loadChildren: './pages/login/login.module#LoginModule'
+          },
+          {
+            path: 'Terms-of-use-and-Privacy',
+            loadChildren: './terms/terms.module#termsModule'
           }
         ]
     },
-
+     
     {path: "what-is-ChoiceGenie", component: AboutComponent},
+    // {path: "Terms-of-use-and-Privacy", component: TermsComponent},
     {path: "stepper", component: StepperOverviewExample},
     {
         path: 'dashboard',

@@ -72,6 +72,7 @@ import { DataService } from './data.service';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { RegisteredComponent } from './registered/registered.component';
+
 //  import { Signup1Component } from './signup1/signup1.component';
 
 // or
