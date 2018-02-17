@@ -9,6 +9,7 @@ import { ResponseContentType } from '@angular/http/src/enums';
 import { FormBuilder, Validators, NgControl, RadioControlValueAccessor,FormControl, FormGroup } from '@angular/forms';
 import { HttpClient, HttpResponse, HttpHeaders } from "@angular/common/http";
 import swal from 'sweetalert2'; 
+import {MatSelect} from '@angular/material';
 //import { FormControl, FormGroup } from '@angular/forms';
 //import { signupdataService } from '../signup1/signupdata.service';
 //import { signupuserdata } from "./signup1data.service";
@@ -16,7 +17,7 @@ import swal from 'sweetalert2';
 // import { TOUCHEND_HIDE_DELAY } from '@angular/material';
 
 //import {signupuserdata} from './signup1data.service';
-import { AbstractControl } from '@angular/forms';
+
 @Component({
   selector: 'app-signup1',
   templateUrl: './signup1.component.html',
@@ -39,7 +40,7 @@ export class Signup1Component implements OnInit {
   emailexist :boolean =false ;
 
  
-  constructor(private fb: FormBuilder, private http: HttpClient,private route: ActivatedRoute, private sg: SimpleGlobal) { }
+  constructor(public router: Router,private fb: FormBuilder, private http: HttpClient,private route: ActivatedRoute, private sg: SimpleGlobal) { }
 
   ngOnInit() {
     this.states();
@@ -60,17 +61,55 @@ export class Signup1Component implements OnInit {
      
     });
   }
+  sweetalertsignup1() {
+    swal({
+        text: "Register Successflluy!",
+        title: "Choice Genie",
+        type: "success",
+        showConfirmButton: false,
+        //     confirmButtonColor: "#DD6B55",
+        timer: 1200,
+        confirmButtonText: "OK",
+
+    })
+        this.router.navigate(['/pages/login'])
+    {
+
+        // swal("Login Successflluy!", "Choice Genie", "success", ).then(function () {
+        //     this.router.navigate(['/home'])
+        // });
+
+
+        // this.router.navigate(['/home'])  
+
+    };
+}
   onChange(e) {
     alert(e)
   }
   check(e) {
     console.log(this.model)
 }
-sweetalertlogin()
-{
-    swal("Register Successflluy!", "Choice Genie", "success")
+emailauthentication() {
+  // alert(this.premiseID.toString().length)
+  //  alert('hello');
+  // if(this.premiseID&&this.premiseID.toString().length===17) {
+  let headers = new HttpHeaders();
+  headers.append('Content-Type', 'application/json');
+  // this.http.get(Config.api + 'data_against_zipcode/' + this.zip_code + '', { headers: headers }),
+  this.http.get(Config.api + '/authenticade_code'+this.model.email +'',{ headers: headers })
 
-  
+      //  this.http.get(Config.api + 'signup/'+ this.zip_code +'', {headers: headers})
+      .subscribe(Res => {
+          console.log(Res);
+        //     this.state= Res[0].state;
+        //  Res[0].state=this.model;
+          this.state = Res;
+         
+
+          // this.data.changeProducts(this.sg['products']);
+
+      });
 }
   states() {
     // alert(this.premiseID.toString().length)
@@ -83,11 +122,11 @@ sweetalertlogin()
 
         //  this.http.get(Config.api + 'signup/'+ this.zip_code +'', {headers: headers})
         .subscribe(Res => {
-          //  console.log(Res);
+            console.log(Res);
           //     this.state= Res[0].state;
           //  Res[0].state=this.model;
             this.state = Res;
-
+           
 
             // this.data.changeProducts(this.sg['products']);
 
@@ -96,17 +135,16 @@ sweetalertlogin()
 cities() {
   // alert(this.premiseID.toString().length)
   //  alert('hello');
-  if(this.model.state&&this.model.state.toString()) {
-   
+ 
 
   let headers = new HttpHeaders();
   headers.append('Content-Type', 'application/json');
   // this.http.get(Config.api + 'data_against_zipcode/' + this.zip_code + '', { headers: headers }),
-  this.http.get(Config.api +'city/'+{ "state": this.model.state }+ '/',{ headers: headers })
+  this.http.get(Config.api +'city/'+ this.model.state + '',{ headers: headers })
 
       //  this.http.get(Config.api + 'signup/'+ this.zip_code +'', {headers: headers})
       .subscribe(Res => {
-         // console.log(Res);
+          console.log(Res);
           //  this.sQuestion = Res[0].sQuestion;
           // this.state = Res[0].state;
           this.city = Res;
@@ -116,7 +154,6 @@ cities() {
 
       });
 }
-  
   signupuserdata() {
     //alert('hello');
     console.log("CHOICE GENIE",this.model);

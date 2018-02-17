@@ -6,7 +6,7 @@ import { SimpleGlobal } from 'ng2-simple-global';
 import { Headers, Http, Response } from '@angular/http';
 import { FormControl, FormGroup } from '@angular/forms';
 import { modelGroupProvider } from '@angular/forms/src/directives/ng_model_group';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import swal from 'sweetalert2';  
 
 @Component({
@@ -54,7 +54,7 @@ export class SignupComponent implements OnInit {
         { value: 'Security Question 5' }
     ];
 
-    constructor(private _formBuilder: FormBuilder, private http: HttpClient, private route: ActivatedRoute) {
+    constructor(public router: Router,private _formBuilder: FormBuilder, private http: HttpClient, private route: ActivatedRoute) {
        
     }
     model = {};
@@ -127,13 +127,36 @@ export class SignupComponent implements OnInit {
         });
 
     }
+    sweetalertsignup() {
+        swal({
+            text: "Signup Successflluy!",
+            title: "Choice Genie",
+            type: "success",
+            showConfirmButton: false,
+            //     confirmButtonColor: "#DD6B55",
+            timer: 1200,
+            confirmButtonText: "OK",
+
+        })
+        //     this.router.navigate(['/pages/login'])
+        // {
+
+        //     // swal("Login Successflluy!", "Choice Genie", "success", ).then(function () {
+        //     //     this.router.navigate(['/home'])
+        //     // });
+
+
+        //     // this.router.navigate(['/home'])  
+
+        // };
+    }
     check() {
         console.log(this.model)
     }
    
     signupdata() {
         // alert(this.premiseID.toString().length)//
-        alert('hello');
+        // alert('hello');
         // if(this.premiseID&&this.premiseID.toString().length===17) {//
         let headers = new HttpHeaders();
         // let premiseAddress = JSON.parse(localStorage.getItem("signupDetails"))[0];//

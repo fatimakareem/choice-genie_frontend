@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule, NgForm, FormBuilder, FormGroup, Valid
 import { CommonModule } from '@angular/common';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { SweetAlertService } from 'ng2-sweetalert2';
-
 // or
 //import { CarouselModule } from 'ngx-bootstrap';
 
@@ -130,6 +129,7 @@ export class MaterialModule {}
     RouterModule.forRoot(AppRoutes),
     HttpModule,
     MaterialModule,
+    MatSelectModule,
     MatNativeDateModule,
     SidebarModule,
     NavbarModule,

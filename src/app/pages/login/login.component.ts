@@ -71,7 +71,7 @@ export class LoginComponent implements OnInit {
 
 
     }
-    login() {
+    login(username:any, password:any) {
 
         // this.route.params.subscribe(params => {
         //   let zip =  this.sg['product_zipcode'];
