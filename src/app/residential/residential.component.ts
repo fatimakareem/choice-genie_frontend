@@ -16,6 +16,12 @@ import { DataService } from '../data.service';
 /**
  * @title Dialog Overview
  */
+export class errorMatcher implements ErrorStateMatcher {
+    isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+        const isSubmitted = form && form.submitted;
+        return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    }
+}
 @Component({
     selector: 'dialog-overview-example',
     templateUrl: 'residential.component.html'
@@ -24,27 +30,19 @@ import { DataService } from '../data.service';
 export class DialogOverviewExample {
 
     name: string;
-    zipCode = '';
+  
 
     constructor(public dialog: MatDialog, private router: Router,private route: ActivatedRoute, private sg: SimpleGlobal, private data: DataService, private Http: Http) {}
 //  constructor(private obj: HomeService, private router: Router, private route: ActivatedRoute, private sg: SimpleGlobal, private data: DataService, private Http: Http) {
       
 //}
 
-    onSubmit(f: NgForm) {
-        this.router.navigate(['/products/' + this.zipCode]);
-    }
-    digitsOnly = '^[0-9,-]+$';
-    promo = new FormControl('', [
-        Validators.pattern(this.digitsOnly)
-    ]);
-    zip_code = new FormControl('', [
-        Validators.pattern(this.digitsOnly)
-    ]);
     openDialog(): void {
         let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
             // width: '300px',
             //data: { name: this.name, animal: this.animal }
+           
+            
         });
 
         dialogRef.afterClosed().subscribe(result => {
@@ -52,6 +50,7 @@ export class DialogOverviewExample {
             //this.animal = result;
         });
     }
+  
     openDialog2(): void {
         let dialogRef = this.dialog.open(ResidentialDialog2Component, {
            //width: '400px',
@@ -72,13 +71,23 @@ export class DialogOverviewExample {
 })
 
 export class DialogOverviewExampleDialog {
-
-    constructor(
+    zipCode = '';
+    constructor(private router: Router,
         public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
         @Inject(MAT_DIALOG_DATA) public data: any) { }
 
-    onNoClick(): void {
+    // onNoClick(): void {
+    //     this.dialogRef.close();
+    // }
+    onSubmit() {
+        this.router.navigate(['/products/' + this.zipCode]);
         this.dialogRef.close();
     }
-
+        digitsOnly = '^[0-9,-]+$';
+        //  public model: any = {};
+       
+    
+        zip_code = new FormControl('', [
+            Validators.pattern(this.digitsOnly)
+        ]);
 }
