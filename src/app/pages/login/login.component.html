@@ -39,10 +39,10 @@
                     </a>
                 </li>
                 <!-- <li class="">
-                  <a routerLink="/about">
-                    <i class="material-icons">fingerprint </i> About Us
-                  </a>
-                </li> -->
+    <a routerLink="/about">
+    <i class="material-icons">fingerprint </i> About Us
+    </a>
+    </li> -->
 
                 <li class="">
                     <a routerLink="/pages/login">
@@ -63,43 +63,43 @@
 <div class="wrapper wrapper-full-page">
 
     <!-- <nav class="navbar navbar-primary navbar-transparent navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-example">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/#/dashboard">
-                    <img src="../../assets/img/LOGOOO-02.png" width="250px" alt="Choice Geni" /></a>
-             
-            </div>
-            <div class="collapse navbar-collapse" id="menu-example">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/dashboard">
-                            <i class="material-icons">dashboard</i> Dashboard
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="/pages/register">
-                            <i class="material-icons">person_add</i> Register
-                        </a>
-                    </li>
-                    <li class=" active ">
-                        <a href="/pages/login">
-                            <i class="material-icons">fingerprint</i> Login
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="/pages/lock">
-                            <i class="material-icons">lock_open</i> Lock
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <div class="container">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-example">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/#/dashboard">
+    <img src="../../assets/img/LOGOOO-02.png" width="250px" alt="Choice Geni" /></a>
+    
+    </div>
+    <div class="collapse navbar-collapse" id="menu-example">
+    <ul class="nav navbar-nav navbar-right">
+    <li>
+    <a href="/dashboard">
+    <i class="material-icons">dashboard</i> Dashboard
+    </a>
+    </li>
+    <li class="">
+    <a href="/pages/register">
+    <i class="material-icons">person_add</i> Register
+    </a>
+    </li>
+    <li class=" active ">
+    <a href="/pages/login">
+    <i class="material-icons">fingerprint</i> Login
+    </a>
+    </li>
+    <li class="">
+    <a href="/pages/lock">
+    <i class="material-icons">lock_open</i> Lock
+    </a>
+    </li>
+    </ul>
+    </div>
+    </div>
     </nav> -->
     <div class="full-page login-page" filter-color="black">
         <!--  you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
@@ -107,51 +107,67 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
-                        <form method="#" action="#">
+                        <!-- <form method="#" action="#">  -->
+                        <form [formGroup]="login">
                             <div class="card card-login card-hidden">
                                 <div class="card-header text-center" data-background-color="rose">
-                                       
-                                                
-                                           
+
+
+
                                     <h4 class="card-title">Login</h4>
                                     <div class="social-line">
-                                       
+
                                     </div>
                                 </div>
                                 <!-- <p class="category text-center">
-                                    Or Be Classical
-                                </p> -->
+    Or Be Classical
+    </p> -->
                                 <div class="card-content">
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="material-icons">face</i>
                                         </span>
-                                        <div class="form-group label-floating">
+                                        <div class="form-group label-floating" [ngClass]="displayFieldCss(login, 'username')">
                                             <label class="control-label">User Name</label>
-                                            <input type="text" class="form-control" name="username" [(ngModel)]="username">
+                                            <!-- <mat-form-field> -->
+                                                <input matInput type="text" id="username"  class="form-control" formControlName="username" placeholder="Username">
+                                                <!-- <mat-error *ngIf="login.controls.username.value == ''">
+                                                    <strong>Username cannot be empty</strong>
+                                                </mat-error> -->
+
+                                            <!-- </mat-form-field> -->
+                                            <!-- <input type="text" class="form-control" name="username" [(ngModel)]="username"> -->
                                         </div>
                                     </div>
                                     <!-- <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">email</i>
-                                        </span>
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Email address</label>
-                                            <input type="email" class="form-control">
-                                        </div>
-                                    </div> -->
+    <span class="input-group-addon">
+    <i class="material-icons">email</i>
+    </span>
+    <div class="form-group label-floating">
+    <label class="control-label">Email address</label>
+    <input type="email" class="form-control">
+    </div>
+    </div> -->
+
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="material-icons">lock_outline</i>
                                         </span>
-                                        <div class="form-group label-floating">
+                                        <div class="form-group label-floating" [ngClass]="displayFieldCss(login, 'password')">
                                             <label class="control-label">Password</label>
-                                            <input type="password" class="form-control" name="password" [(ngModel)]="password">
+                                            <!-- <mat-form-field> -->
+                                                <input matInput type="password" id="password"  class="form-control" formControlName="password" placeholder="Password">
+                                                <!-- <mat-error *ngIf="login.controls.password.value == ''">
+                                                    <strong>Password cannot be empty</strong>
+                                                </mat-error> -->
+
+                                            <!-- </mat-form-field> -->
+                                            <!-- <input type="password" class="form-control" name="password" [(ngModel)]="password"> -->
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer text-center">
-                                    <button type="submit" class="btn btn-rose btn-wd btn-lg" (click)="login();sweetalertlogin()">LOGIN</button>
+                                    <button type="submit" class="btn btn-rose btn-wd btn-lg" (click)="onLogin()">LOGIN</button>
                                 </div>
                             </div>
                         </form>
@@ -210,52 +226,53 @@
                                 <h3 style=" color: white">Choice Genie</h3>
                                 <ul>
                                     <li>
-                                        <p style=" color: white">Choice Genie is a Texas-based electricity company founded on the idea that electricity should be affordable and contribute to where you live.</p>
+                                        <p style=" color: white">Choice Genie is a Texas-based electricity company founded on the idea that electricity
+                                            should be affordable and contribute to where you live.</p>
                                     </li>
-                                   
+
                                     <li></li>
 
 
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
-                                <div class="footer-widget">
-                                        <h3 style=" color: white">My Choice Genie</h3>
-                                    <!-- <ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="footer-widget">
+                                <h3 style=" color: white">My Choice Genie</h3>
+                                <!-- <ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <li>
+    <a href="/register" data-toggle="modal" type="submit" style=" color: rgb(19, 1, 1) ; width : 100px; height: 50px">
+    <i aria-hidden="true" ></i> Sign Up</a>
+    </li>
+    <br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <li>
+    <a href="/pages/login" data-toggle="modal" type="submit" style=" color: rgb(19, 1, 1); width : 100px; height: 50px">
+    <i aria-hidden="true"></i> Login</a>
+    </li>
+    </ul> -->
+
+                                <ul>
+                                    <b>
                                         <li>
-                                                <a href="/register" data-toggle="modal" type="submit" style=" color: rgb(19, 1, 1) ; width : 100px; height: 50px">
-                                                    <i aria-hidden="true" ></i> Sign Up</a>
-                                            </li>
-                                            <br>
-                                            <br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <li>
-                                                <a href="/pages/login" data-toggle="modal" type="submit" style=" color: rgb(19, 1, 1); width : 100px; height: 50px">
-                                                    <i aria-hidden="true"></i> Login</a>
-                                            </li>
-                                        </ul> -->
+                                            <a style=" color: white" href="/register">
+                                                <i aria-hidden="true" class=" fa fa-chevron-right"></i> Sign up </a>
+                                        </li>
 
-                                        <ul>
-                                                <b>
-                                                    <li>
-                                                        <a style=" color: white" href="/register">
-                                                            <i aria-hidden="true"  class=" fa fa-chevron-right"></i> Sign up </a>
-                                                    </li>
-            
-                                                    <li>
-                                                        <a style=" color: white" onclick="topFunction()" href="/pages/login">
-                                                            <i style=" color: white" aria-hidden="true"  class="fa fa-chevron-right"></i> Login With Us</a>
-                                                    </li>
-                                                </b>
-                                            </ul>
+                                        <li>
+                                            <a style=" color: white" onclick="topFunction()" href="/pages/login">
+                                                <i style=" color: white" aria-hidden="true" class="fa fa-chevron-right"></i> Login With Us</a>
+                                        </li>
+                                    </b>
+                                </ul>
 
 
 
 
 
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

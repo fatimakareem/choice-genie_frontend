@@ -1,7 +1,8 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
 import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
+import { HttpModule, } from '@angular/http';
+// import { HttpService } from './http-service';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -61,7 +62,7 @@ import { NormalLayoutComponent } from './layouts/normal/normal-layout.component'
 import { AppRoutes } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { UserSidebarComponent } from './user-sidebar/user-sidebar.component';
 import { AboutComponent } from './about/about.component';
 import {StepperOverviewExample} from "./signup/stepper-overview-example";
@@ -71,6 +72,10 @@ import { DataService } from './data.service';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { RegisteredComponent } from './registered/registered.component';
+import {LoginComponent } from './../app/pages/login/login.component';
+import { LoginService } from './pages/login/login.service';
+
+
 
 //  import { Signup1Component } from './signup1/signup1.component';
 
@@ -157,7 +162,8 @@ export class MaterialModule {}
     HomeService,
     SimpleGlobal,
     DataService,
-    SweetAlertService
+    SweetAlertService,
+    LoginService
   ],
   bootstrap: [AppComponent],
   schemas: [
