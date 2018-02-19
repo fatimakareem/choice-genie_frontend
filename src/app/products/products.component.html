@@ -1,6 +1,6 @@
-<div class="main-content custom">
-    <!-- <div class="container-fluid"> -->
-    <div class="row">
+<!-- <div class="main-content custom"> -->
+    
+    
         <div class="col-sm-12">
             <div class="page-title">
                 <span>Product Search</span>
@@ -157,102 +157,74 @@
             <!-- </div> -->
 
         </div>
-
-        <!-- <div>
+    
+<!-- <div>
     <div> -->
-        <div class="container">
-            <div class="text-center">
-                <!-- <h1>Angular 2 - Pagination Example with logic like Google</h1> -->
 
-                <!-- items being paged -->
-                <div *ngFor="let item of pagedItems">{{item.name}}</div>
-
-                <!-- pager -->
-                <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
-                    <li [ngClass]="{disabled:pager.currentPage === 1}">
-                        <a (click)="setPage(1)" class="btn btn-rose">First</a>
-                    </li>
-                    <li [ngClass]="{disabled:pager.currentPage === 1}">
-                        <a (click)="setPage(pager.currentPage - 1)" class="btn btn-rose">Previous</a>
-                    </li>
-                    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
-                        <a (click)="setPage(page)" class="btn btn-rose">{{page}}</a>
-                    </li>
-                    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                        <a (click)="setPage(pager.currentPage + 1)" class="btn btn-rose" type="Next">Next</a>
-                    </li>
-                    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                        <a (click)="setPage(pager.totalPages)" class="btn btn-rose" type="Last">Last</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-        <!--<div class="main-content">-->
-        <!--<div class="container-fluid">-->
-        <!--<div class="row">-->
-        <!--<div class="col-md-12">-->
-        <!--<div class="card">-->
-        <!--<div class="card-header card-header-icon" data-background-color="purple">-->
-        <!--<i class="material-icons">assignment</i>-->
-        <!--</div>-->
-        <!--<div class="card-content">-->
-        <!--<h4 class="card-title">DataTables.net</h4>-->
-        <!--<div class="toolbar">-->
-        <!--&lt;!&ndash;        Here you can write extra buttons/actions for the toolbar              &ndash;&gt;-->
-        <!--</div>-->
-        <!--<div class="material-datatables table-responsive">-->
-        <!--<table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">-->
-        <!--<thead>-->
-        <!--<tr>-->
-        <!--<th>{{ dataTable.headerRow[0] }}</th>-->
-        <!--<th>{{ dataTable.headerRow[1] }}</th>-->
-        <!--<th>{{ dataTable.headerRow[2] }}</th>-->
-        <!--<th>{{ dataTable.headerRow[3] }}</th>-->
-        <!--<th>{{ dataTable.headerRow[4] }}</th>-->
-        <!--<th class="disabled-sorting text-right">{{ dataTable.headerRow[5] }}</th>-->
-        <!--</tr>-->
-        <!--</thead>-->
-        <!--<tfoot>-->
-        <!--<tr>-->
-        <!--<th>{{ dataTable.footerRow[0] }}</th>-->
-        <!--<th>{{ dataTable.footerRow[1] }}</th>-->
-        <!--<th>{{ dataTable.footerRow[2] }}</th>-->
-        <!--<th>{{ dataTable.footerRow[3] }}</th>-->
-        <!--<th>{{ dataTable.footerRow[4] }}</th>-->
-        <!--<th class="text-right">{{ dataTable.footerRow[5] }}</th>-->
-        <!--</tr>-->
-        <!--</tfoot>-->
-        <!--<tbody>-->
-        <!--<tr *ngFor="let row of dataTable.dataRows">-->
-        <!--<td>{{row[0]}}</td>-->
-        <!--<td>{{row[1]}}</td>-->
-        <!--<td>{{row[2]}}</td>-->
-        <!--<td>{{row[3]}}</td>-->
-        <!--<td>{{row[4]}}</td>-->
-        <!--<td class="text-right">-->
-        <!--<button class="btn btn-simple btn-info btn-icon like"  matTooltip="Like" [matTooltipPosition]="'left'">-->
-        <!--<i class="material-icons">favorite</i>-->
-        <!--</button>-->
-        <!--<button class="btn btn-simple btn-warning btn-icon edit"  matTooltip="Edit" [matTooltipPosition]="'left'">-->
-        <!--<i class="material-icons">dvr</i>-->
-        <!--</button>-->
-        <!--<button class="btn btn-simple btn-danger btn-icon remove"  matTooltip="Remove" [matTooltipPosition]="'left'">-->
-        <!--<i class="material-icons">close</i>-->
-        <!--</button>-->
-        <!--</td>-->
-        <!--</tr>-->
-        <!--</tbody>-->
-        <!--</table>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--&lt;!&ndash; end content&ndash;&gt;-->
-        <!--</div>-->
-        <!--&lt;!&ndash;  end card  &ndash;&gt;-->
-        <!--</div>-->
-        <!--&lt;!&ndash; end col-md-12 &ndash;&gt;-->
-        <!--</div>-->
-        <!--&lt;!&ndash; end row &ndash;&gt;-->
-        <!--</div>-->
-        <!--</div>-->
+<!--<div class="main-content">-->
+<!--<div class="container-fluid">-->
+<!--<div class="row">-->
+<!--<div class="col-md-12">-->
+<!--<div class="card">-->
+<!--<div class="card-header card-header-icon" data-background-color="purple">-->
+<!--<i class="material-icons">assignment</i>-->
+<!--</div>-->
+<!--<div class="card-content">-->
+<!--<h4 class="card-title">DataTables.net</h4>-->
+<!--<div class="toolbar">-->
+<!--&lt;!&ndash;        Here you can write extra buttons/actions for the toolbar              &ndash;&gt;-->
+<!--</div>-->
+<!--<div class="material-datatables table-responsive">-->
+<!--<table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>{{ dataTable.headerRow[0] }}</th>-->
+<!--<th>{{ dataTable.headerRow[1] }}</th>-->
+<!--<th>{{ dataTable.headerRow[2] }}</th>-->
+<!--<th>{{ dataTable.headerRow[3] }}</th>-->
+<!--<th>{{ dataTable.headerRow[4] }}</th>-->
+<!--<th class="disabled-sorting text-right">{{ dataTable.headerRow[5] }}</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tfoot>-->
+<!--<tr>-->
+<!--<th>{{ dataTable.footerRow[0] }}</th>-->
+<!--<th>{{ dataTable.footerRow[1] }}</th>-->
+<!--<th>{{ dataTable.footerRow[2] }}</th>-->
+<!--<th>{{ dataTable.footerRow[3] }}</th>-->
+<!--<th>{{ dataTable.footerRow[4] }}</th>-->
+<!--<th class="text-right">{{ dataTable.footerRow[5] }}</th>-->
+<!--</tr>-->
+<!--</tfoot>-->
+<!--<tbody>-->
+<!--<tr *ngFor="let row of dataTable.dataRows">-->
+<!--<td>{{row[0]}}</td>-->
+<!--<td>{{row[1]}}</td>-->
+<!--<td>{{row[2]}}</td>-->
+<!--<td>{{row[3]}}</td>-->
+<!--<td>{{row[4]}}</td>-->
+<!--<td class="text-right">-->
+<!--<button class="btn btn-simple btn-info btn-icon like"  matTooltip="Like" [matTooltipPosition]="'left'">-->
+<!--<i class="material-icons">favorite</i>-->
+<!--</button>-->
+<!--<button class="btn btn-simple btn-warning btn-icon edit"  matTooltip="Edit" [matTooltipPosition]="'left'">-->
+<!--<i class="material-icons">dvr</i>-->
+<!--</button>-->
+<!--<button class="btn btn-simple btn-danger btn-icon remove"  matTooltip="Remove" [matTooltipPosition]="'left'">-->
+<!--<i class="material-icons">close</i>-->
+<!--</button>-->
+<!--</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; end content&ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash;  end card  &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; end col-md-12 &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; end row &ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->

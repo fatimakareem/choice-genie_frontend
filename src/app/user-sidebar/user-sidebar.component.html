@@ -4,7 +4,7 @@
     <ul>
       <li>
         <div class="text-center">
-          <button type="button" class="btn btn-rose" (click)="fetchProducts();fetchmonth();fetchrenewable();"  > Search <i class="material-icons" title="Use these filters to set your preferences. Get rid of the plans you don’t want to see and only show those that fit your needs.">search</i></button>
+          <button type="button" class="btn btn-rose" (click)="fetchProducts();fetchmonth();fetchrenewable(); fetchprice();"  > Search <i class="material-icons" title="Use these filters to set your preferences. Get rid of the plans you don’t want to see and only show those that fit your needs.">search</i></button>
         </div>
       </li>
       <li>
@@ -23,6 +23,44 @@
           <mat-option value="2000">2000 kWh</mat-option>
         </mat-select>
       </li>
+<!-- 
+      <div class="group">
+        <a class="link-info tool-tip" href="javascript:" title="" data-original-title="Price per kilowatt hour: A kilowatt hour is equal to 1 kilowatt (1kW) of power used for 1 hour (1h) of time.">Info</a>
+        <h3>Price/kWh</h3>
+        <div class="fields">
+          <input tabindex="2" maxlength="5" title="price" class="text" type="text" name="price_from" id="price_from"> ¢
+          <span class="to">to</span>
+          <input tabindex="3" maxlength="5" title="price" class="text" type="text" name="price_to" id="price_to"> ¢
+        </div>
+      </div> -->
+
+
+
+
+
+
+
+
+      <!-- <li>
+        <h5> Price/kWh </h5> 
+        <div class="form-group label-floating">
+            <label class="control-label">Min Price</label>
+            <input   tabindex="2" maxlength="5"  type="text" class="form-control" [(ngModel)]="min"  name="min"  > 
+            <span class="to"><b>To</b></span>
+           
+
+
+         
+        </div>
+      </li>
+<li>
+    <div class="form-group label-floating">
+    <label class="control-label">Max Price</label>
+    <input   tabindex="3" maxlength="5"  type="text" class="form-control" [(ngModel)]="max"  name="max"> 
+    </div>
+</li> -->
+
+      
       <!-- <li> -->
         <!-- <h5>Custom Usage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-info-circle" aria-hidden="true" title=""></i></h5> -->
         <!-- <div class="form-group label-floating"> -->
