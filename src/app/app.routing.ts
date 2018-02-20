@@ -70,7 +70,7 @@ export const AppRoutes: Routes = [
             loadChildren: './admin/search-customer/search-customer.module#SearchCustomerModule'
           },
           {
-            path: 'login-cmp',
+            path: 'login',
             loadChildren: './pages/login/login.module#LoginModule'
           },
           {

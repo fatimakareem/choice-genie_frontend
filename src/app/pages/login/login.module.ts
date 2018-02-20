@@ -10,19 +10,19 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatDatepickerModule} from "@angular/material";
 import { HttpClientModule } from '@angular/common/http';
 import { SweetAlertService } from 'ng2-sweetalert2';
+import { LoginRoutes } from './login.routing';
 
 
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forChild([
-            {path:'login-cmp',component:LoginComponent}
-        ]),
+        RouterModule.forChild(LoginRoutes),
         MaterialModule,
         FormsModule,
         ReactiveFormsModule,
         MatDatepickerModule,
-        HttpClientModule
+        HttpClientModule,
+            
     ],
     declarations: [LoginComponent],
     providers: [
@@ -31,3 +31,4 @@ import { SweetAlertService } from 'ng2-sweetalert2';
 })
 
 export class LoginModule {}
+
