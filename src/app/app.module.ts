@@ -1,7 +1,7 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
 import { RouterModule } from '@angular/router';
-import { HttpModule, } from '@angular/http';
+import { HttpModule } from '@angular/http';
 // import { HttpService } from './http-service';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -74,6 +74,8 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { RegisteredComponent } from './registered/registered.component';
 import {LoginComponent } from './../app/pages/login/login.component';
 import { LoginService } from './pages/login/login.service';
+import { ContactusComponent } from './contactus/contactus.component';
+// import { newProduct } from './admin/new-product/new-product.service';
 
 
 
@@ -133,6 +135,7 @@ export class MaterialModule {}
     FormsModule, ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes),
     HttpModule,
+    HttpClientModule,
     MaterialModule,
     MatSelectModule,
     MatNativeDateModule,
@@ -163,7 +166,9 @@ export class MaterialModule {}
     SimpleGlobal,
     DataService,
     SweetAlertService,
-    LoginService
+    LoginService,
+    
+    
   ],
   bootstrap: [AppComponent],
   schemas: [
