@@ -110,9 +110,9 @@ export class LoginComponent implements OnInit {
         // }
       //);
     }
-    // else {
-    //   this.validateAllFormFields(this.login);
-    // }
+    else {
+      this.validateAllFormFields(this.login);
+    }
   }
 
   foremail() {

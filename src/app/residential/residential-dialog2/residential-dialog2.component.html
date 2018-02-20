@@ -1,46 +1,67 @@
 <div class="dialogRes">
-  <form action="#" method="#" novalidate="" class="">
-    <div class="card card-login">
-      <div class="card-header text-center" data-background-color="rose">
-        <h4 class="card-title">Login to Continue</h4>
-        <div class="social-line">
-          <a class="btn btn-just-icon btn-simple" href="#btn">
-            <i class="fa fa-facebook-square"></i>
-          </a>
-          <a class="btn btn-just-icon btn-simple" href="#pablo">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a class="btn btn-just-icon btn-simple" href="#eugen">
-            <i class="fa fa-google-plus"></i>
-          </a>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
+        <div class="card card-login card-hidden">
+            <div class="card-header text-center" data-background-color="rose">
+
+
+
+                <h4 class="card-title">Login</h4>
+                <div class="social-line">
+
+                </div>
+            </div>
+            <!-- <p class="category text-center">
+Or Be Classical
+</p> -->
+            <div class="card-content">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">face</i>
+                    </span>
+                    <div class="form-group label-floating">
+                        <label class="control-label">User Name</label>
+                        <!-- <mat-form-field> -->
+                            <input matInput type="text" class="form-control" name="username" [(ngModel)]="username">
+                            <!-- <mat-error *ngIf="login.controls.username.value == ''">
+                                <strong>Username cannot be empty</strong>
+                            </mat-error> -->
+
+                        <!-- </mat-form-field> -->
+                        <!-- <input type="text" class="form-control" name="username" [(ngModel)]="username"> -->
+                    </div>
+                </div>
+                <!-- <div class="input-group">
+<span class="input-group-addon">
+<i class="material-icons">email</i>
+</span>
+<div class="form-group label-floating">
+<label class="control-label">Email address</label>
+<input type="email" class="form-control">
+</div>
+</div> -->
+
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="material-icons">lock_outline</i>
+                    </span>
+                    <div class="form-group label-floating" >
+                        <label class="control-label">Password</label>
+                        <!-- <mat-form-field> -->
+                            <input matInput type="password" class="form-control"name="password"[(ngModel)]="password">
+                            <!-- <mat-error *ngIf="login.controls.password.value == ''">
+                                <strong>Password cannot be empty</strong>
+                            </mat-error> -->
+
+                        <!-- </mat-form-field> -->
+                        <!-- <input type="password" class="form-control" name="password" [(ngModel)]="password"> -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer text-center">
+                <button type="submit" class="btn btn-rose btn-wd btn-lg">LOGIN</button>
+            </div>
         </div>
-      </div>
-    
-      <div class="card-content">
-        <div class="input-group">
-          <span class="input-group-addon">
-              <i class="material-icons">email</i>
-          </span>
-          <div class="form-group label-floating is-empty">
-            <label class="control-label">Email address</label>
-            <input class="form-control" type="email">
-          </div>
-        </div>
-        <div class="input-group">
-          <span class="input-group-addon">
-              <i class="material-icons">lock_outline</i>
-          </span>
-          <div class="form-group label-floating is-empty">
-            <label class="control-label">Password</label>
-            <input class="form-control" type="password">
-          </div>
-        </div>
-      </div>
-      <div class="footer text-center">
-        <button class="btn btn-rose btn-wd btn-lg" type="submit">Log in</button>
-      </div>
-    </div>
-  </form>
+    </form>
 </div>
 
 <!--<h1 mat-dialog-title>Sign in to continue</h1>-->

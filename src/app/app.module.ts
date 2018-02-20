@@ -74,6 +74,7 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { RegisteredComponent } from './registered/registered.component';
 import {LoginComponent } from './../app/pages/login/login.component';
 import { LoginService } from './pages/login/login.service';
+import { ResidentialService } from './residential/residential-dialog2/residential.service';
 
 
 
@@ -163,7 +164,8 @@ export class MaterialModule {}
     SimpleGlobal,
     DataService,
     SweetAlertService,
-    LoginService
+    LoginService,
+ResidentialService
   ],
   bootstrap: [AppComponent],
   schemas: [

@@ -10,6 +10,8 @@ import { FormBuilder, Validators, NgControl, RadioControlValueAccessor,FormContr
 import { HttpClient, HttpResponse, HttpHeaders } from "@angular/common/http";
 import swal from 'sweetalert2'; 
 import {MatSelect} from '@angular/material';
+import { PasswordValidation } from './password-validator.component';
+
 //import { FormControl, FormGroup } from '@angular/forms';
 //import { signupdataService } from '../signup1/signupdata.service';
 //import { signupuserdata } from "./signup1data.service";
@@ -58,7 +60,6 @@ export class Signup1Component implements OnInit {
       'password': ['', Validators.compose([Validators.required, Validators.minLength(6)])],
      'confirmpassword': ['', Validators.compose([Validators.required])],
     
-     
     });
   }
   sweetalertsignup1() {
