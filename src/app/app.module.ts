@@ -1,7 +1,7 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
 import { RouterModule } from '@angular/router';
-import { HttpModule, } from '@angular/http';
+import { HttpModule } from '@angular/http';
 // import { HttpService } from './http-service';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, NgForm, FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -74,7 +74,12 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { RegisteredComponent } from './registered/registered.component';
 import {LoginComponent } from './../app/pages/login/login.component';
 import { LoginService } from './pages/login/login.service';
+<<<<<<< HEAD
 import { ResidentialService } from './residential/residential-dialog2/residential.service';
+=======
+import { ContactusComponent } from './contactus/contactus.component';
+// import { newProduct } from './admin/new-product/new-product.service';
+>>>>>>> f8d475229aa783fd2b2d4d12f3754e6bee3f5933
 
 
 
@@ -134,6 +139,7 @@ export class MaterialModule {}
     FormsModule, ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes),
     HttpModule,
+    HttpClientModule,
     MaterialModule,
     MatSelectModule,
     MatNativeDateModule,
@@ -165,7 +171,12 @@ export class MaterialModule {}
     DataService,
     SweetAlertService,
     LoginService,
+<<<<<<< HEAD
 ResidentialService
+=======
+    
+    
+>>>>>>> f8d475229aa783fd2b2d4d12f3754e6bee3f5933
   ],
   bootstrap: [AppComponent],
   schemas: [

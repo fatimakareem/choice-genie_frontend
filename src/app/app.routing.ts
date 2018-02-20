@@ -8,6 +8,7 @@ import {NormalLayoutComponent} from "./layouts/normal/normal-layout.component";
 import {StepperOverviewExample} from "./signup/stepper-overview-example";
 import { LoginComponent } from './pages/login/login.component';
 import { TermsComponent } from './terms/terms.component';
+// import { ContactusComponent } from './contactus/contactus.component';
 // import {Signup1Component} from './signup1/signup1.component';
 
 export const AppRoutes: Routes = [
@@ -44,6 +45,7 @@ export const AppRoutes: Routes = [
               path: 'residential',
               loadChildren: './residential/residential.module#ResidentialModule'
           },
+         
           {
             path: 'signup',
             loadChildren: './signup/signup.module#SignupModule'
@@ -74,12 +76,16 @@ export const AppRoutes: Routes = [
           {
             path: 'Terms-of-use-and-Privacy',
             loadChildren: './terms/terms.module#termsModule'
-          }
+          },
+          {
+            path: 'contactus',
+            loadChildren: './contactus/contactus.module#contactusModule'
+        }
         ]
     },
      
     {path: "what-is-ChoiceGenie", component: AboutComponent},
-    // {path: "Terms-of-use-and-Privacy", component: TermsComponent},
+    // {path: "contact", component: ContactusComponent},
     {path: "stepper", component: StepperOverviewExample},
     {
         path: 'dashboard',
