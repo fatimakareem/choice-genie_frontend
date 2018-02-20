@@ -29,6 +29,7 @@ import { PasswordValidation } from './password-validator.component';
 export class Signup1Component implements OnInit {
  state;
   city;
+  confirmpassword;
   signupForm: FormGroup;
  private next:any;
   model:any = {};
@@ -58,7 +59,7 @@ export class Signup1Component implements OnInit {
        'country': ['', Validators.compose([Validators.required, Validators.pattern(this.normalPattern)])],
        'city': ['', Validators.compose([Validators.required, Validators.pattern(this.normalPattern)])],
       'password': ['', Validators.compose([Validators.required, Validators.minLength(6)])],
-     'confirmpassword': ['', Validators.compose([Validators.required])],
+     'confirmpassword': ['', Validators.compose([Validators.required, Validators.minLength(6)])],
     
     });
   }
