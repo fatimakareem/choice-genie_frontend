@@ -54,8 +54,25 @@ export class NewProductComponent implements OnInit {
 
     });
   }
-  onSubmit(f) {
+  // sweetalertsignup1() {
+  //   swal({
+  //       text: "Register Successflluy!",
+  //       title: "Choice Genie",
+  //       type: "success",
+  //       showConfirmButton: false,
+  //       //     confirmButtonColor: "#DD6B55",
+  //       timer: 1200,
+  //       confirmButtonText: "OK",
 
+
+  //   })
+  //   // . then 
+    
+  //   // window.location.reload();
+  // }
+  
+  onSubmit(f) {
+    f.resetForm();
   }
   signupuserdata() {
     //alert('hello');
@@ -68,8 +85,20 @@ export class NewProductComponent implements OnInit {
       .subscribe(Res => {
         console.log(Res);
         // this.next = Res[0].next;
-
+        swal({
+          text: "Register Successflluy!",
+          title: "Choice Genie",
+          type: "success",
+          showConfirmButton: false,
+          //     confirmButtonColor: "#DD6B55",
+          timer: 1200,
+          confirmButtonText: "OK",
+  
+  
+      })
+     
         console.log(this.model);
+
         //     //    this.state = Res[0].state;
         //     //this.sg['products'] = Res.json()['Results'];
         //     //this.data.changeProducts(this.sg['products']);

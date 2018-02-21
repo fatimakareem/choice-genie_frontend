@@ -4,42 +4,42 @@
     <hr />
     
     <div class="row">
-      <form >
-        <!-- <form  method="" action="" (ngSubmit)="onSubmit(f)" #f="ngForm" >   -->
+      <!-- <form   *ngif="signupForm"> -->
+        <form  method="" action="" (ngSubmit)="onSubmit(f)" #f="ngForm" >  
       <div class="col-md-4 col-sm-6">
         <div class="form-group">
           <mat-form-field>
               <!-- <input matInput placeholder="First Name" [formControl]="signupForm.controls['fname']" required [(ngModel)]="model.fname"> -->
 
-            <input matInput placeholder="Zipcode"     required  [(ngModel)]="model.zipcode">
+            <input matInput placeholder="Zipcode"     required  [(ngModel)]="model.zipcode"name="zipcode">
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-8 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Company Name"   required  [(ngModel)]="model.Companyname">
+            <input matInput placeholder="Company Name"   required  [(ngModel)]="model.Companyname"name="Companyname">
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-12 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Plan Information"    [(ngModel)]="model.plan_information">
+            <input matInput placeholder="Plan Information"   [(ngModel)]="model.plan_information"name="plan_information">
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-6 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Price Details"   [(ngModel)]="model.price_rate">
+            <input matInput placeholder="Price Details"[(ngModel)]="model.price_rate"name="price_rate">
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-6 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Company Profile Link"    [(ngModel)]="model.profileurl">
+            <input matInput placeholder="Company Profile Link"   [(ngModel)]="model.profileurl"name="profileurl">
           </mat-form-field>
         </div>
       </div>
@@ -47,28 +47,28 @@
       <div class="col-md-6 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Terms of Service "    [(ngModel)]="model.terms_of_service">
+            <input matInput placeholder="Terms of Service "[(ngModel)]="model.terms_of_service"name="terms_of_service">
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-6 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Fact Sheet  "   [(ngModel)]="model.fact_sheet">
+            <input matInput placeholder="Fact Sheet  "  [(ngModel)]="model.fact_sheet"name="fact_sheet">
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-4 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Contact Number"  required  [(ngModel)]="model.Phone">
+            <input matInput placeholder="Contact Number"  required  [(ngModel)]="model.Phone"name="Phone">
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-4 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Sign up Company"    [(ngModel)]="model.sign_up">
+            <input matInput placeholder="Sign up Company"   [(ngModel)]="model.sign_up"name="sign_up">
           </mat-form-field>
         </div>
       </div>
@@ -76,28 +76,28 @@
       <div class="col-md-4 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Renewable price"    [(ngModel)]="model.renewable">
+            <input matInput placeholder="Renewable price"  [(ngModel)]="model.renewable"name="renewable">
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-4 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Price of 500 KWH"  required  [(ngModel)]="model.price_500_kwh">
+            <input matInput placeholder="Price of 500 KWH" required  [(ngModel)]="model.price_500_kwh"name="price_500_kwh">
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-4 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Price of 1000 KWH"  required  [(ngModel)]="model.price_1000_kwh">
+            <input matInput placeholder="Price of 1000 KWH" required  [(ngModel)]="model.price_1000_kwh"name="price_1000_kwh">
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-4 col-sm-6">
         <div class="form-group">
           <mat-form-field>
-            <input matInput placeholder="Price of 2000 KWH" required  [(ngModel)]="model.price_2000_kwh">
+            <input matInput placeholder="Price of 2000 KWH"  required  [(ngModel)]="model.price_2000_kwh"name="price_2000_kwh">
           </mat-form-field>
         </div>
       </div>
@@ -359,7 +359,7 @@
       </div> -->
       <div class="col-md-12 col-sm-12">
         <div class="form-group">
-          <button class="btn btn-lrg btn-rose btn-fill btn-wd" style="width:100%; border-radius:50px;font-size:24px !important;" type="submit" (click)="signupuserdata()"
+          <button class="btn btn-lrg btn-rose btn-fill btn-wd" style="width:100%; border-radius:50px;font-size:24px !important;" type="submit" (click)="signupuserdata();sweetalertsignup1()"
           >Add New Product </button>
         </div>
       </div>
