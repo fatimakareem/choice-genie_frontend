@@ -14,21 +14,21 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="card-header card-header-text" data-background-color="rose">
-                                        
-                                            <h4 class="card-title">{{data.title}} </h4>
-                                        
+
+                                        <h4 class="card-title">{{data.title}} </h4>
+
                                     </div>
                                 </div>
                                 <div class="card-content">
                                     <div class="col-sm-3  col-sm-3 col-xs-5 plan-detail">
-                                            <a href="{{data.profileurl}}" target="_blank">
-                                        <p>
-                                                
-                                            <img src="{{data.profile_logo}}">
-                                        
-                                        </p>
+                                        <a href="{{data.profileurl}}" target="_blank">
+                                            <p>
+
+                                                <img src="{{data.profile_logo}}">
+
+                                            </p>
                                         </a>
-                                        
+
                                         <p>
                                             <img src="{{data.rating_logo}}">
                                         </p>
@@ -98,9 +98,10 @@
                                         <button class="btn btn-rose" (click)="openDialog(data.id)">Sign Up
                                             <i class="material-icons">bubble_chart</i>
                                         </button>
-                                     
-                                        <button type="submit" value="Delete"  class="DelBtn"
-data-toggle="modal" data-target="#myModal2" > <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+
+                                        <button type="submit" value="Delete" class="DelBtn" data-toggle="modal" data-target="#myModal2">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </button>
 
                                     </div>
                                     <div class="col-sm-12">
@@ -118,20 +119,22 @@ data-toggle="modal" data-target="#myModal2" > <i class="fa fa-trash-o" aria-hidd
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" style="    color: white;
                                 opacity: 1;">&times;</button>
-                                            <h4 class="modal-title" style="text-align: center;
-                                color: red;
-                                font-size: 30px;">
-                                {{data.title}}<br/>
-                                <p style="width:40px;height:2px">
-                                    <img src="{{data.profile_logo}}" >
-                                </p>
-                                
+                                <div class="col-md-4">
+                                            <h4 class="modal-title" style="text-align: center; color: black; font-size: 30px;">
+                                                {{data.title}}</h4>
+                                            </div>
+                                                <br/>
+                                                <div class="col-md-4 ml-auto">
+                                                <p style="width:40px;height:2px">
+                                                    <img src="{{data.profile_logo}}">
+                                                </p>
+                                            </div>
 
-                            </h4>
+                                            
                                         </div>
                                         <div class="modal-body" style="font-size: 18px;
                                 text-align: center;">
-                                <h3>Plan information </h3>
+                                            <h3>Plan information </h3>
                                             <p>{{data.plan_information}}</p>
                                             <h3>price</h3>
                                             <p>
@@ -140,18 +143,45 @@ data-toggle="modal" data-target="#myModal2" > <i class="fa fa-trash-o" aria-hidd
 
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" (click)="deleteworkexperienceClick(workId)" data-dismiss="modal" style="background: red;
+                                            <!-- <a style="color:black" href="{{data.terms_of_service}}" target="_blank">
+                                                        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                                        Terms of service
+                                                    </a>
+            
+                                                    <a style="color:black" href="#">
+                                                        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                                        Your rights as a Customer
+                                                    </a>
+            
+                                                    <a style="color:black" href="{{data.fact_sheet}}" target="_blank">
+                                                        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                                        Fact Sheet
+                                                    </a> -->
+                                                    
+                                            <button type="button" class="btn btn-default"  style="background: red;
                                 color: white;
                                 border: red;
-                                width: 20%;
+                                width: 40%;
                                 height: 45px;
-                                font-size: 18px;">Delete</button>
-                                            <button type="button" class="btn btn-default" data-dismiss="modal" style="background: gray;
+                                font-size: 18px;">
+                                <a style="color:black" href="{{data.terms_of_service}}" target="_blank"></a>
+                                                <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>                                               Terms of service                                             
+                                                
+                                            </button>
+                                        
+                                            <!-- <button type="button" class="btn btn-default"  style="background: gray;
                                 color: white;
-                                border: gray;
-                                width: 20%;
+                               border: gray;
+                                width: 40%;
                                 height: 45px;
-                                font-size: 18px;">Cancel</button>
+                                font-size: 18px;">
+                                                <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                                Fact Sheet
+                                                <a style="color:black" href="{{data.fact_sheet}}" target="_blank">
+
+
+                                                </a>
+                                            </button> -->
                                         </div>
                                     </div>
                                 </div>
