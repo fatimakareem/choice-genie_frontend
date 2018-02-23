@@ -24,9 +24,9 @@
                                         <p>
                                             <img src="{{data.profile_logo}}">
                                         </p>
-                                        <!-- <p>
+                                        <p>
                                             <img src="{{data.rating_logo}}">
-                                        </p> -->
+                                        </p>
 
                                         <!-- <br> <star-rating-comp [size]="'large'" [starType]="'svg'" [rating]="" [(ngModel)]="rating"></star-rating-comp>  -->
 
@@ -57,18 +57,38 @@
                                     <div class="col-md-3 col-sm-3 col-xs-7 term">
 
                                         <h3>
-                                            <b>Cancelation Fee</b>
+                                            <b>Cancellation Fee</b>
                                             <!-- <b>{{data.cancelation_fee}}</b> -->
 
                                         </h3>
-                                        <h4> {{ data.cancelation_fee.split(' ',3000)[2]}}</h4>
+                                        <h4> {{ data.cancelation_fee}}</h4>
 
                                         <h3>Call now</h3>
                                         <h4>{{data.phone}}</h4>
+                                      
+                                        <h3><b>Plan Documents</b></h3>
+                                                <a style="color:black" href="{{data.terms_of_service}}" target="_blank">
+                                                    <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                                    Terms of service
+                                                </a>
+                                           
+                                                <a style="color:black" href="#">
+                                                    <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                                    Your rights as a Customer
+                                                </a>
+                                          
+                                                <a style="color:black" href="{{data.fact_sheet}}" target="_blank">
+                                                    <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                                    Fact Sheet
+                                                </a>
+                                         
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-7 term top-margin-25">
                                         <!--(click)="signUp(data.product_id)"-->
                                         <button class="btn btn-rose" (click)="openDialog(data.id)">Sign Up
+                                            <i class="material-icons">bubble_chart</i>
+                                        </button>
+                                        <button class="btn btn-rose" (click)="openDialog2(data.id)">Sign Up
                                             <i class="material-icons">bubble_chart</i>
                                         </button>
                                     </div>
@@ -83,7 +103,7 @@
                             <div class="clearfix"></div>
                             <div id="p-pane-{{i}}" class="panel-details collapse">
                                 <div class="clearfix">
-                                    <div class="col-sm-12 col-md-6">
+                                    <!-- <div class="col-sm-12 col-md-6">
                                         <h4>Get your year-pass savings:</h4>
                                         <ul>
                                             <li>Keep your bills mild when the weather gets wild, and get a low rate in between.*</li>
@@ -112,18 +132,18 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6">
+                                    </div> -->
+                                    <div class="col-sm-12 ">
                                         <h4>Rates Detail:</h4>
                                         <div class="table">
                                             <table class="table-normal">
                                                 <thead>
                                                     <tr>
                                                         <td>
-                                                            <h4>Average Monthly Use</h4>
+                                                            <h1 style="font-size: 25px">Average Monthly Use</h1>
                                                         </td>
                                                         <td>
-                                                            <h4>Average Price per kWh</h4>
+                                                            <h1 style="font-size: 25px">Average Price per kWh</h1>
                                                         </td>
                                                     </tr>
                                                 </thead>
@@ -132,10 +152,10 @@
                                                     <tr>
 
                                                         <td>
-                                                            <h4>{{ items.split(' ',3000)[0]}} KWH </h4>
+                                                            <h2 style="font-size: 20px">{{ items.split(' ',3000)[0]}} KWH </h2>
                                                         </td>
                                                         <td>
-                                                            <h4>{{ items.split(' ',3000)[2]}} $</h4>
+                                                            <h2 style="font-size: 20px"> {{ items.split(' ',3000)[2]}} $</h2>
                                                         </td>
                                                         <!-- <td><h4>$ 15.20</h4></td> -->
                                                     </tr>
