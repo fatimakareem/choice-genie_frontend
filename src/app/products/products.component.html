@@ -82,10 +82,10 @@
                                             Terms of service
                                         </a>
 
-                                        <a style="color:black" href="#">
+                                        <!-- <a style="color:black" href="#">
                                             <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
                                             Your rights as a Customer
-                                        </a>
+                                        </a> -->
 
                                         <a style="color:black" href="{{data.fact_sheet}}" target="_blank">
                                             <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
@@ -117,6 +117,7 @@
                                     <!-- Modal content-->
                                     <div class="modal-content" style="margin-top:25%; width:119%;">
                                         <div class="modal-header">
+<<<<<<< HEAD
                                             <button type="button" class="close" data-dismiss="modal" style="    color: white;
                                 opacity: 1;">&times;</button>
                                 <div class="col-md-4">
@@ -136,13 +137,43 @@
                                 text-align: center;">
                                             <h3>Plan information </h3>
                                             <p>{{data.plan_information}}</p>
+=======
+                                            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+
+                                <div class="col-sm-13">
+                                    <div class="card-header card-header-text" data-background-color="rose">
+                                        
+                                            <h4 class="card-title">{{data.title}} </h4>
+                                        
+                                    </div>
+                                </div>
+
+                                <p class="col-md-3 col-sm-4 col-xs-7 term" style="width:40px;height:40px">
+                                    <img src="{{data.profile_logo}}" style="margin-top:-17px">
+                                </p>
+
+                            </div>
+                                <hr style="border: 1px solid lightgray;width: 100%;">
+  
+                             <div class="modal-body" style="font-size: 18px;
+                                text-align: center;">
+                                <h3 style="float:left">Plan Information </h3>
+                                
+                                <ul>
+                                      <li>      <p *ngFor="let itemss of data.plan_information">
+                                                {{itemss.split('  ',3000)}}
+                                            </p>
+                                        </li> 
+                                    </ul>
+>>>>>>> 0ce999f0557180654292b36daa3e0336686dc047
                                             <h3>price</h3>
                                             <p>
                                                 {{data.price_rate}}
                                             </p>
 
-                                        </div>
+                             </div>
                                         <div class="modal-footer">
+<<<<<<< HEAD
                                             <!-- <a style="color:black" href="{{data.terms_of_service}}" target="_blank">
                                                         <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
                                                         Terms of service
@@ -182,6 +213,9 @@
 
                                                 </a>
                                             </button> -->
+=======
+                                            
+>>>>>>> 0ce999f0557180654292b36daa3e0336686dc047
                                         </div>
                                     </div>
                                 </div>
