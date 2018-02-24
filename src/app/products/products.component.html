@@ -32,7 +32,11 @@
                                         <p>
                                             <img src="{{data.rating_logo}}">
                                         </p>
-
+                                        <p>
+                                        <a data-toggle="modal" data-target="#myModal2" style="color:rgba(0,0,0, 0.87);font:400px;text-decoration:underline;">
+                                                Product Plan 
+                                              </a>
+                                            </p>
                                         <!-- <p>
         {{data.id}}
         </p> -->
@@ -41,23 +45,10 @@
 
                                     </div>
 
-                                    <div class="col-sm-3 col-sm-3 col-xs-5 rate plan-detail">
-                                        <h3>
-                                            <b>Plan Details</b>
-                                        </h3>
-                                        <br>
-                                        <label data-toggle="modal" data-target="#myModal2" style="color:black;font:400px">
-                                            <b>Product Plan</b>
-                                        </label>
-                                        <!-- <p *ngFor="let item of data.plan_information">
-                                            {{item}}
-                                        </p> -->
-                                        <!-- <p>{{amount| myCurrency }} </p> -->
-                                        <!-- <p *ngFor="let item of yehDekhana">{{data.plan_information}}</p> -->
-                                    </div>
+                                    
                                     <div class="col-md-3 col-sm-3 col-xs-5 rate">
                                         <h3>
-                                            <b>Price</b>
+                                            Price
                                         </h3>
                                         <div class="holder white">
                                         <div class="holder">
@@ -74,47 +65,22 @@
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-7 term">
 
-                                        <h3>Call now</h3>
+                                        <h3>
+                                            Call now
+                                        </h3>
                                         <h4>{{data.phone}}</h4>
 
-<<<<<<< HEAD
-                                       
-=======
-                                        <h3>
-                                            <b>Plan Documents</b>
-                                        </h3>
-                                        <a style="color:black" href="{{data.terms_of_service}}" target="_blank">
-                                            <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                            Terms of service
-                                        </a>
-
-                                        <!-- <a style="color:black" href="#">
-        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-        Your rights as a Customer
-        </a> -->
-
-                                        <a style="color:black" href="{{data.fact_sheet}}" target="_blank">
-                                            <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                            Fact Sheet
-                                        </a>
->>>>>>> 947db9784317bee3684bf9e536cb63cbc31e4c0a
-
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-7 term top-margin-25">
-                                        <!--(click)="signUp(data.product_id)"-->
                                         <button class="btn btn-rose" (click)="openDialog(data.id)">Sign Up
                                             <i class="material-icons">bubble_chart</i>
                                         </button>
 
-<<<<<<< HEAD
-
-=======
-                                        <button type="submit" value="Delete" class="DelBtn" data-toggle="modal" data-target="#myModal2">
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                        </button>
->>>>>>> 947db9784317bee3684bf9e536cb63cbc31e4c0a
-
                                     </div>
+                                    <!-- <div class="col-md-3 col-sm-3 col-xs-7 term top-margin-25">
+                                       (click)="signUp(data.product_id)"
+                                       
+
+
+                                    </div> -->
                                     <div class="col-sm-12">
                                         <a href="#p-pane-{{i}}" class="view-more collapsed" data-toggle="collapse">
                                             View more
@@ -131,7 +97,6 @@
                                             <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
 
                                             <div class="col-sm-13">
-<<<<<<< HEAD
                                                 <br>
                                                 <br>
                                                 <div>
@@ -139,17 +104,11 @@
                                                     <h3 class="card-title">
                                                         <b>{{data.title}}</b>
                                                     </h3>
-=======
-                                                <div class="card-header card-header-text" data-background-color="rose">
-
-                                                    <h4 class="card-title">{{data.title}} </h4>
->>>>>>> 947db9784317bee3684bf9e536cb63cbc31e4c0a
 
                                                 </div>
                                             </div>
 
                                             <p class="col-md-3 col-sm-4 col-xs-7 term" style="width:40px;height:40px">
-<<<<<<< HEAD
                                                 <br>
                                                 <img src="{{data.profile_logo}}" style="margin-top:-17px">
                                             </p>
@@ -180,7 +139,7 @@
                                             
                                             <ul>
                                                 <li style="color:transparent">
-                                                    <a style="color:black" href="{{data.terms_of_service}}" target="_blank">
+                                                    <a style="color:rgba(0,0,0, 0.87)" href="{{data.terms_of_service}}" target="_blank">
                                                         <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
                                                         Terms of service
                                                     </a>
@@ -190,7 +149,7 @@
                                     Your rights as a Customer
                                 </a> -->
                                                 <li style="color:transparent">
-                                                    <a style="color:black" href="{{data.fact_sheet}}" target="_blank">
+                                                    <a style="color:rgba(0,0,0, 0.87)" href="{{data.fact_sheet}}" target="_blank">
                                                         <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
                                                         Fact Sheet
                                                     </a>
@@ -198,31 +157,6 @@
                                             </ul>
                                         </div>
 
-=======
-                                                <img src="{{data.profile_logo}}" style="margin-top:-17px">
-                                            </p>
-
-                                        </div>
-                                        <hr style="border: 1px solid lightgray;width: 100%;">
-
-                                        <div class="modal-body" style="font-size: 18px;
-        text-align: center;">
-                                            <h3 style="float:left">Plan Information </h3>
-
-                                            <ul>
-                                                <li>
-                                                    <p *ngFor="let itemss of data.plan_information">
-                                                        {{itemss.split(' ',3000)}}
-                                                    </p>
-                                                </li>
-                                            </ul>
-                                            <h3>price</h3>
-                                            <p>
-                                                {{data.price_rate}}
-                                            </p>
-
-                                        </div>
->>>>>>> 947db9784317bee3684bf9e536cb63cbc31e4c0a
                                         <div class="modal-footer">
 
                                         </div>
