@@ -34,8 +34,8 @@
                                         </p>
 
                                         <!-- <p>
-                                            {{data.id}}
-                                        </p> -->
+        {{data.id}}
+        </p> -->
 
                                         <!-- <br> <star-rating-comp [size]="'large'" [starType]="'svg'" [rating]="" [(ngModel)]="rating"></star-rating-comp>  -->
 
@@ -77,7 +77,27 @@
                                         <h3>Call now</h3>
                                         <h4>{{data.phone}}</h4>
 
+<<<<<<< HEAD
                                        
+=======
+                                        <h3>
+                                            <b>Plan Documents</b>
+                                        </h3>
+                                        <a style="color:black" href="{{data.terms_of_service}}" target="_blank">
+                                            <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                            Terms of service
+                                        </a>
+
+                                        <!-- <a style="color:black" href="#">
+        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+        Your rights as a Customer
+        </a> -->
+
+                                        <a style="color:black" href="{{data.fact_sheet}}" target="_blank">
+                                            <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                            Fact Sheet
+                                        </a>
+>>>>>>> 947db9784317bee3684bf9e536cb63cbc31e4c0a
 
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-7 term top-margin-25">
@@ -86,7 +106,13 @@
                                             <i class="material-icons">bubble_chart</i>
                                         </button>
 
+<<<<<<< HEAD
 
+=======
+                                        <button type="submit" value="Delete" class="DelBtn" data-toggle="modal" data-target="#myModal2">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </button>
+>>>>>>> 947db9784317bee3684bf9e536cb63cbc31e4c0a
 
                                     </div>
                                     <div class="col-sm-12">
@@ -105,6 +131,7 @@
                                             <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
 
                                             <div class="col-sm-13">
+<<<<<<< HEAD
                                                 <br>
                                                 <br>
                                                 <div>
@@ -112,11 +139,17 @@
                                                     <h3 class="card-title">
                                                         <b>{{data.title}}</b>
                                                     </h3>
+=======
+                                                <div class="card-header card-header-text" data-background-color="rose">
+
+                                                    <h4 class="card-title">{{data.title}} </h4>
+>>>>>>> 947db9784317bee3684bf9e536cb63cbc31e4c0a
 
                                                 </div>
                                             </div>
 
                                             <p class="col-md-3 col-sm-4 col-xs-7 term" style="width:40px;height:40px">
+<<<<<<< HEAD
                                                 <br>
                                                 <img src="{{data.profile_logo}}" style="margin-top:-17px">
                                             </p>
@@ -165,6 +198,31 @@
                                             </ul>
                                         </div>
 
+=======
+                                                <img src="{{data.profile_logo}}" style="margin-top:-17px">
+                                            </p>
+
+                                        </div>
+                                        <hr style="border: 1px solid lightgray;width: 100%;">
+
+                                        <div class="modal-body" style="font-size: 18px;
+        text-align: center;">
+                                            <h3 style="float:left">Plan Information </h3>
+
+                                            <ul>
+                                                <li>
+                                                    <p *ngFor="let itemss of data.plan_information">
+                                                        {{itemss.split(' ',3000)}}
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <h3>price</h3>
+                                            <p>
+                                                {{data.price_rate}}
+                                            </p>
+
+                                        </div>
+>>>>>>> 947db9784317bee3684bf9e536cb63cbc31e4c0a
                                         <div class="modal-footer">
 
                                         </div>
@@ -175,35 +233,35 @@
                             <div id="p-pane-{{i}}" class="panel-details collapse">
                                 <div class="clearfix">
                                     <!-- <div class="col-sm-12 col-md-6">
-                                        <h4>Get your year-pass savings:</h4>
-                                        <ul>
-                                            <li>Keep your bills mild when the weather gets wild, and get a low rate in between.*</li>
-                                            <li>In summer and winter months, see the Season Pass Savings right on your bill.
-
-                                            </li>
-                                        </ul>
-                                        <h5>Plan Documents</h5>
-                                        <ul class="list-normal">
-                                            <li>
-                                                <a href="{{data.terms_of_service}}" target="_blank">
-                                                    <i class="material-icons">picture_as_pdf</i>
-                                                    Terms of service
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="material-icons">picture_as_pdf</i>
-                                                    Your rights as a Customer
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{data.fact_sheet}}" target="_blank">
-                                                    <i class="material-icons">picture_as_pdf</i>
-                                                    Fact Sheet
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div> -->
+        <h4>Get your year-pass savings:</h4>
+        <ul>
+        <li>Keep your bills mild when the weather gets wild, and get a low rate in between.*</li>
+        <li>In summer and winter months, see the Season Pass Savings right on your bill.
+        
+        </li>
+        </ul>
+        <h5>Plan Documents</h5>
+        <ul class="list-normal">
+        <li>
+        <a href="{{data.terms_of_service}}" target="_blank">
+        <i class="material-icons">picture_as_pdf</i>
+        Terms of service
+        </a>
+        </li>
+        <li>
+        <a href="#">
+        <i class="material-icons">picture_as_pdf</i>
+        Your rights as a Customer
+        </a>
+        </li>
+        <li>
+        <a href="{{data.fact_sheet}}" target="_blank">
+        <i class="material-icons">picture_as_pdf</i>
+        Fact Sheet
+        </a>
+        </li>
+        </ul>
+        </div> -->
                                     <div class="col-sm-12 ">
                                         <h4>Rates Detail:</h4>
                                         <div class="table">
@@ -231,9 +289,9 @@
                                                         <!-- <td><h4>$ 15.20</h4></td> -->
                                                     </tr>
                                                     <!-- <tr>
-    <td><h4>1000 kWh</h4></td>
-    <td><h4>$ 13.60</h4></td>
-    </tr> -->
+        <td><h4>1000 kWh</h4></td>
+        <td><h4>$ 13.60</h4></td>
+        </tr> -->
                                                 </tbody>
                                             </table>
 
@@ -251,7 +309,7 @@
     </div>
 </div>
 <!-- <div>
-    <div> -->
+        <div> -->
 <div class="container">
     <div class="text-center">
         <!-- <h1>Angular 2 - Pagination Example with logic like Google</h1> -->

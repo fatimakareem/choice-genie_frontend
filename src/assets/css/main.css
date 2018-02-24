@@ -634,9 +634,9 @@ background-color: #ffffff;}
 .sidebar .logo {
   width: 100%;
   text-align: center; }
-  .sidebar .logo img {
-    /* max-width: 120px;  */
-  }
+  /* .sidebar .logo img {
+    max-width: 120px; 
+  } */
 .sidebar.custom {
   -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
@@ -1325,4 +1325,22 @@ h3 {
 .terms-container-wrapper {
   background: #ffffff;
   padding-top: 30px;
+}
+
+#myBtn {    
+  display: block;
+  /* display: none;    */
+   position: fixed;    
+   bottom: 5px;  
+   z-index: 99;  
+     right: 10px;  
+       border: none;  
+         outline: none !important;  
+           background-color: #214147; 
+              color: white;  
+                cursor: pointer; 
+                   padding: 10px; 
+                      border-radius: 50%; 
+                         height: 60px !important;  
+                           width: 60px;
 }
