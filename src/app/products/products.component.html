@@ -14,24 +14,25 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="card-header card-header-text" data-background-color="rose">
-                                        
-                                            <h4 class="card-title">{{data.title}} </h4>
-                                        
+
+                                        <h4 class="card-title">{{data.title}} </h4>
+
                                     </div>
                                 </div>
                                 <div class="card-content">
                                     <div class="col-sm-3  col-sm-3 col-xs-5 plan-detail">
-                                            <a href="{{data.profileurl}}" target="_blank">
-                                        <p>
-                                                
-                                            <img src="{{data.profile_logo}}">
-                                        
-                                        </p>
+                                        <a href="{{data.profileurl}}" target="_blank">
+                                            <p>
+
+                                                <img src="{{data.profile_logo}}">
+
+                                            </p>
                                         </a>
-                                        
+
                                         <p>
                                             <img src="{{data.rating_logo}}">
                                         </p>
+
                                         <!-- <p>
                                             {{data.id}}
                                         </p> -->
@@ -44,9 +45,13 @@
                                         <h3>
                                             <b>Plan Details</b>
                                         </h3>
-                                        <p *ngFor="let item of data.plan_information">
+                                        <br>
+                                        <label data-toggle="modal" data-target="#myModal2" style="color:black;font:400px">
+                                            <b>Product Plan</b>
+                                        </label>
+                                        <!-- <p *ngFor="let item of data.plan_information">
                                             {{item}}
-                                        </p>
+                                        </p> -->
                                         <!-- <p>{{amount| myCurrency }} </p> -->
                                         <!-- <p *ngFor="let item of yehDekhana">{{data.plan_information}}</p> -->
                                     </div>
@@ -54,9 +59,14 @@
                                         <h3>
                                             <b>Price</b>
                                         </h3>
+                                        <div class="holder white">
+                                        <div class="holder">
                                         <h4 *ngFor="let items of data.price_rate">
+
                                             {{items}}$
                                         </h4>
+                                    </div>
+                                </div>
                                         <!-- <small>{{data.display_uom}}</small> -->
                                         <!-- <br /> -->
 
@@ -64,33 +74,10 @@
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-7 term">
 
-                                        <h3>
-                                            <b>Cancellation Fee</b>
-                                            <!-- <b>{{data.cancelation_fee}}</b> -->
-
-                                        </h3>
-                                        <h4> {{ data.cancelation_fee}}</h4>
-
                                         <h3>Call now</h3>
                                         <h4>{{data.phone}}</h4>
 
-                                        <h3>
-                                            <b>Plan Documents</b>
-                                        </h3>
-                                        <a style="color:black" href="{{data.terms_of_service}}" target="_blank">
-                                            <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                            Terms of service
-                                        </a>
-
-                                        <!-- <a style="color:black" href="#">
-                                            <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                            Your rights as a Customer
-                                        </a> -->
-
-                                        <a style="color:black" href="{{data.fact_sheet}}" target="_blank">
-                                            <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                            Fact Sheet
-                                        </a>
+                                       
 
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-7 term top-margin-25">
@@ -98,9 +85,8 @@
                                         <button class="btn btn-rose" (click)="openDialog(data.id)">Sign Up
                                             <i class="material-icons">bubble_chart</i>
                                         </button>
-                                     
-                                        <button type="submit" value="Delete"  class="DelBtn"
-data-toggle="modal" data-target="#myModal2" > <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+
+
 
                                     </div>
                                     <div class="col-sm-12">
@@ -118,39 +104,69 @@ data-toggle="modal" data-target="#myModal2" > <i class="fa fa-trash-o" aria-hidd
                                         <div class="modal-header">
                                             <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
 
-                                <div class="col-sm-13">
-                                    <div class="card-header card-header-text" data-background-color="rose">
-                                        
-                                            <h4 class="card-title">{{data.title}} </h4>
-                                        
-                                    </div>
-                                </div>
+                                            <div class="col-sm-13">
+                                                <br>
+                                                <br>
+                                                <div>
 
-                                <p class="col-md-3 col-sm-4 col-xs-7 term" style="width:40px;height:40px">
-                                    <img src="{{data.profile_logo}}" style="margin-top:-17px">
-                                </p>
+                                                    <h3 class="card-title">
+                                                        <b>{{data.title}}</b>
+                                                    </h3>
 
-                            </div>
-                                <hr style="border: 1px solid lightgray;width: 100%;">
-  
-                             <div class="modal-body" style="font-size: 18px;
-                                text-align: center;">
-                                <h3 style="float:left">Plan Information </h3>
-                                
-                                <ul>
-                                      <li>      <p *ngFor="let itemss of data.plan_information">
-                                                {{itemss.split('  ',3000)}}
-                                            </p>
-                                        </li> 
-                                    </ul>
-                                            <h3>price</h3>
-                                            <p>
-                                                {{data.price_rate}}
+                                                </div>
+                                            </div>
+
+                                            <p class="col-md-3 col-sm-4 col-xs-7 term" style="width:40px;height:40px">
+                                                <br>
+                                                <img src="{{data.profile_logo}}" style="margin-top:-17px">
                                             </p>
 
-                             </div>
-                                        <div class="modal-footer">
+                                        </div>
+                                        <hr style="border: 1px solid lightgray;width: 100%;">
+
+                                        <div class="modal-body" style="font-size: 18px">
+                                            <h3 style="float:left">Plan Information </h3>
+
+                                            <div style="float:left">
+                                                <p style="float:left" *ngFor="let itemss of data.plan_information">
+                                                    {{itemss}}
+                                                </p>
+
+                                            </div>
+
+
+
+                                            <h3  style="float:left">
+                                                <b>Cancellation Fee</b>
+                                                <!-- <b>{{data.cancelation_fee}}</b> -->
+
+                                            </h3>
+                                            <h4  style="float:left"> {{ data.cancelation_fee}}</h4>
+                                        </div>
+                                        <div style="float:left">
                                             
+                                            <ul>
+                                                <li style="color:transparent">
+                                                    <a style="color:black" href="{{data.terms_of_service}}" target="_blank">
+                                                        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                                        Terms of service
+                                                    </a>
+                                                </li>
+                                                <!-- <a style="color:black" href="#">
+                                    <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                    Your rights as a Customer
+                                </a> -->
+                                                <li style="color:transparent">
+                                                    <a style="color:black" href="{{data.fact_sheet}}" target="_blank">
+                                                        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                                        Fact Sheet
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="modal-footer">
+
                                         </div>
                                     </div>
                                 </div>
