@@ -2,115 +2,44 @@
     <!-- <div class="container-fluid"> -->
     <div class="row">
         <div class="col-sm-12">
+            
             <div class="page-title">
                 <span>Product Search</span>
+                <br>
                 <div>
                     <!-- <div class="container">
+    
+    </div> -->
 
-                    </div> -->
-                    
                     <div class="products-area" *ngIf="prod_loaded">
                         <div class="card" *ngFor="let data of sg['products']; let i = index">
                             <div class="row">
-                                    <div class="modal fade" id="myModal2" role="dialog" >
-                                            <div class="modal-dialog" >
-                                                <!-- Modal content-->
-                                                <div class="modal-content" style="margin-top:25%; width:119%;">
-                                                    <div class="modal-header">
-                                                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-
-                                                        <div class="col-sm-13">
-                                                            <br>
-                                                            <br>
-                                                            <div>
-
-                                                                <h3 class="modal-title">
-                                                                    <b>{{data.title}}</b>
-                                                                </h3>
-
-                                                            </div>
-                                                        </div>
-
-                                                        <p class="col-md-3 col-sm-4 col-xs-7 term" style="width:40px;height:40px">
-                                                            <br>
-                                                            <img src="{{data.profile_logo}}" style="margin-top:-17px">
-                                                        </p>
-
-                                                    </div>
-                                                    <hr style="border: 1px solid lightgray;width: 100%;">
-
-                                                    <div class="modal-body" style="font-size: 18px">
-                                                        <h3 style="float:left">Plan Information </h3>
-
-                                                        <div style="float:left">
-                                                            <p style="float:left" >
-                                                                {{data.plan_information}}
-                                                            </p>
-
-                                                        </div>
-
-
-
-                                                        <h3 style="float:left">
-                                                            <b>Cancellation Fee</b>
-                                                            <!-- <b>{{data.cancelation_fee}}</b> -->
-
-                                                        </h3>
-                                                        <h4 style="float:left"> {{data.cancelation_fee}}</h4>
-                                                    </div>
-                                                    <div style="float:left">
-
-                                                        <ul>
-                                                            <li style="color:transparent">
-                                                                <a style="color:rgba(0,0,0, 0.87)" href="{{data.terms_of_service}}" target="_blank">
-                                                                    <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                                                    Terms of service
-                                                                </a>
-                                                            </li>
-                                                            <!-- <a style="color:black" href="#">
-                                                        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                                        Your rights as a Customer
-                                                    </a> -->
-                                                            <li style="color:transparent">
-                                                                <a style="color:rgba(0,0,0, 0.87)" href="{{data.fact_sheet}}" target="_blank">
-                                                                    <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                                                    Fact Sheet
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <div class="modal-footer">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                               
                                 <div class="col-sm-12">
                                     <div class="card-header card-header-text" data-background-color="rose">
 
                                         <h4 class="card-title">{{data.title}} </h4>
 
                                     </div>
-                                </div>
+                                
                                 <div class="card-content">
                                     <div class="col-md-4  col-sm-3 col-xs-5 plan-detail">
                                         <a href="{{data.profileurl}}" target="_blank">
                                             <p>
 
-                                                <img src="{{data.profile_logo}}">
+                                                <img src="{{data.profile_logo}}" style="width: 250px;height:200px" >
 
                                             </p>
                                         </a>
 
                                         <p>
-                                            <img src="{{data.rating_logo}}">
+                                            <img src="{{data.rating_logo}}" >
                                         </p>
-                                        <p>
+                                        <!-- <p> -->
 
                                             <!-- <p>
-        {{data.id}}
-        </p> -->
+    {{data.id}}
+    </p> -->
 
                                             <!-- <br> <star-rating-comp [size]="'large'" [starType]="'svg'" [rating]="" [(ngModel)]="rating"></star-rating-comp>  -->
 
@@ -124,18 +53,18 @@
                                         </h3>
 
                                         <!-- <div class="holder white"> -->
-                                        <div class="product-price" style="  
-                                        background:linear-gradient(-45deg, #25B7D3 0, #214 100%);
-                                       
-                                        border: 3px solid #fff;
-                                        border-radius: 100%;
-                                        color: #fff;
-                                        height: 140px;
-                                        margin: 0 auto;
-                                        padding-top: 36px;
-                                        position: relative;
-                                        text-align: center;
-                                        width: 140px;">
+                                        <div class="product-price" style="
+    background:linear-gradient(-45deg, #25B7D3 0, #214 100%);
+    
+    border: 3px solid #fff;
+    border-radius: 100%;
+    color: #fff;
+    height: 140px;
+    margin: 0 auto;
+    padding-top: 36px;
+    position: relative;
+    text-align: center;
+    width: 140px;">
 
                                             <h3 class="product-price" *ngFor="let items of data.price_rate">
 
@@ -162,11 +91,11 @@
 
                                     </div>
                                     <!-- <div class="col-md-3 col-sm-3 col-xs-7 term top-margin-25">
-                                       (click)="signUp(data.product_id)"
-                                       
-
-
-                                    </div> -->
+    (click)="signUp(data.product_id)"
+    
+    
+    
+    </div> -->
                                     <div class="col-sm-12">
                                         <a href="#p-pane-{{i}}" class="view-more collapsed" data-toggle="collapse">
                                             View more
@@ -175,13 +104,13 @@
                                     </div>
                                 </div>
                             </div>
-
+                            </div>
                             <div class="clearfix"></div>
                             <div id="p-pane-{{i}}" class="panel-details collapse">
                                 <div class="clearfix">
 
                                     <h3>Plan Information </h3>
-<br>
+                                    <br>
                                     <div>
                                         <p *ngFor="let itemss of data.plan_information">
                                             {{itemss}}
@@ -194,64 +123,65 @@
                                         <!-- <b>{{data.cancelation_fee}}</b> -->
 
                                     </h3>
-                                  
-                                    
 
-                                        <h4> {{ data.cancelation_fee}}</h4>
 
-                                
-                                  
-                                 
+
+                                    <h4> {{ data.cancelation_fee}}</h4>
+
+
+
+
                                     <br>
                                     <div>
-                                    <div>
+                                        <div>
                                             <h3>Plan Document</h3>
-                                        <ul>
-                                            <li style="color:transparent">
-                                                <a style="color:rgba(0,0,0, 0.87)" href="{{data.terms_of_service}}" target="_blank">
-                                                    <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                                    Terms of service
-                                                </a>
-                                            </li>
+                                            <ul>
+                                                <li style="color:transparent">
+                                                    <a style="color:rgba(0,0,0, 0.87)" href="{{data.terms_of_service}}" target="_blank">
+                                                        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                                        Terms of service
+                                                    </a>
+                                                </li>
 
-                                            <li style="color:transparent">
-                                                <a style="color:rgba(0,0,0, 0.87)" href="{{data.fact_sheet}}" target="_blank">
-                                                    <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                                    Fact Sheet
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div></div>
+                                                <li style="color:transparent">
+                                                    <a style="color:rgba(0,0,0, 0.87)" href="{{data.fact_sheet}}" target="_blank">
+                                                        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                                                        Fact Sheet
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <!-- <div class="col-sm-12 col-md-6">
-        <h4>Get your year-pass savings:</h4>
-        <ul>
-        <li>Keep your bills mild when the weather gets wild, and get a low rate in between.*</li>
-        <li>In summer and winter months, see the Season Pass Savings right on your bill.
-        
-        </li>
-        </ul>
-        <h5>Plan Documents</h5>
-        <ul class="list-normal">
-        <li>
-        <a href="{{data.terms_of_service}}" target="_blank">
-        <i class="material-icons">picture_as_pdf</i>
-        Terms of service
-        </a>
-        </li>
-        <li>
-        <a href="#">
-        <i class="material-icons">picture_as_pdf</i>
-        Your rights as a Customer
-        </a>
-        </li>
-        <li>
-        <a href="{{data.fact_sheet}}" target="_blank">
-        <i class="material-icons">picture_as_pdf</i>
-        Fact Sheet
-        </a>
-        </li>
-        </ul>
-        </div> -->
+    <h4>Get your year-pass savings:</h4>
+    <ul>
+    <li>Keep your bills mild when the weather gets wild, and get a low rate in between.*</li>
+    <li>In summer and winter months, see the Season Pass Savings right on your bill.
+    
+    </li>
+    </ul>
+    <h5>Plan Documents</h5>
+    <ul class="list-normal">
+    <li>
+    <a href="{{data.terms_of_service}}" target="_blank">
+    <i class="material-icons">picture_as_pdf</i>
+    Terms of service
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <i class="material-icons">picture_as_pdf</i>
+    Your rights as a Customer
+    </a>
+    </li>
+    <li>
+    <a href="{{data.fact_sheet}}" target="_blank">
+    <i class="material-icons">picture_as_pdf</i>
+    Fact Sheet
+    </a>
+    </li>
+    </ul>
+    </div> -->
                                     <div class="col-sm-12 ">
                                         <h4>Rates Detail:</h4>
                                         <div class="table">
@@ -279,9 +209,9 @@
                                                         <!-- <td><h4>$ 15.20</h4></td> -->
                                                     </tr>
                                                     <!-- <tr>
-        <td><h4>1000 kWh</h4></td>
-        <td><h4>$ 13.60</h4></td>
-        </tr> -->
+    <td><h4>1000 kWh</h4></td>
+    <td><h4>$ 13.60</h4></td>
+    </tr> -->
                                                 </tbody>
                                             </table>
 
@@ -291,6 +221,7 @@
                             </div>
                         </div>
                     </div>
+                   
                 </div>
             </div>
             <!-- </div> -->
@@ -299,7 +230,7 @@
     </div>
 </div>
 <!-- <div>
-        <div> -->
+    <div> -->
 <div class="container">
     <div class="text-center">
         <!-- <h1>Angular 2 - Pagination Example with logic like Google</h1> -->

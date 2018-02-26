@@ -8,7 +8,7 @@
         </div>
       </li>
       
-      <li>
+      <!-- <li>
         <h5>Enter Zip Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-info-circle" aria-hidden="true" title="Enter zipcode."></i></h5> 
        
         <div class="form-group label-floating">
@@ -16,7 +16,7 @@
          <b> <input  type="text"  class="form-control" [(ngModel)]="zip_code" name="zipcode" style="font-size: 20px" ></b>
         </div>
     
-      </li>
+      </li> -->
       <li>
         <h5>Estimated Usage&nbsp;&nbsp;&nbsp;<i class="fa fa-info-circle" aria-hidden="true" title="If you choose a plan with a long contract period, you may be subject to an early cancellation fee if you decide to change plans prior to the expiration of the contract period.  Plans that are shorter give you more flexibility to switch, but they only lock in your set rate for a short amount of time.Month-to-Month plans are usually Variable or Indexed offers."></i></h5>
         <mat-form-field >
@@ -162,6 +162,11 @@
           </label>
         </div>
       </li>
+      <li>
+          <div class="text-center">
+            <button type="button" class="btn btn-rose" (click)="fetchProducts();fetchmonth();fetchrenewable();fetchzip()"> Search <i class="material-icons" title="Use these filters to set your preferences. Get rid of the plans you don’t want to see and only show those that fit your needs.">search</i></button>
+          </div>
+        </li>
       <!-- <li>
         <h5>Ranging from</h5>
         <mat-slider thumbLabel min="0" max="100" step="5" value="0"></mat-slider>
