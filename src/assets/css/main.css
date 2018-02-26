@@ -604,7 +604,9 @@ background-color: #ffffff;}
     text-align: center;
     min-height: 320px; }
     .success-for-business .icon-box:hover {
-      background: rgba(4, 208, 235, 0.5);
+background: goldenrod;
+/* background-color: transparent; */
+      /* background: rgba(4, 208, 235, 0.5); */
      }
       .success-for-business .icon-box:hover .material-icons {
         color: #fefefe; }

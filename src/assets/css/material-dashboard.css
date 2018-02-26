@@ -6171,6 +6171,7 @@
      .alert.alert-danger a, .alert.alert-danger .alert-link {
        color: #ffffff; }
    .alert.alert-rose {
+    background: linear-gradient(-45deg, #25B7D3 0, #214 100%);
      background-color:#25B7D3;
      color: #ffffff;
      border-radius: 3px;
