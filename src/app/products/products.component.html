@@ -1,3 +1,31 @@
+<!-- <mat-form-field>
+        List length:
+        <input matInput [(ngModel)]="length">
+      </mat-form-field>
+      
+      <mat-form-field>
+        Page size:
+        <input matInput [(ngModel)]="pageSize">
+      </mat-form-field>
+      <mat-form-field>
+        Page size options:
+        <input matInput
+               [ngModel]="pageSizeOptions"
+               (ngModelChange)="setPageSizeOptions($event)">
+      </mat-form-field>
+      
+      <mat-paginator [length]="length"
+                    [pageSize]="pageSize"
+                    [pageSizeOptions]="pageSizeOptions"
+                    (page)="pageEvent = $event">
+      </mat-paginator>
+      
+      <div *ngIf="pageEvent">
+        <h5>Page Change Event Properties</h5>
+        <div>List length: {{pageEvent.length}}</div>
+        <div>Page size: {{pageEvent.pageSize}}</div>
+        <div>Page index: {{pageEvent.pageIndex}}</div>
+      </div> -->
 <div class="main-content custom">
     <!-- <div class="container-fluid"> -->
     <div class="row">
@@ -11,7 +39,7 @@
     
     </div> -->
 
-                    <div class="products-area" *ngIf="prod_loaded">
+                    <div class="products-area" *ngIf="prod_loaded;else no_data_templ">
                         <div class="card" *ngFor="let data of sg['products']; let i = index">
                             <div class="row">
                                
@@ -48,7 +76,7 @@
 
 
                                     <div class="col-md-4 col-sm-5 col-xs-5 rate" style="width: 450px">
-                                        <h3>
+                                        <h3 style=" text-align: center">
                                             Price
                                         </h3>
 
@@ -59,18 +87,18 @@
     border: 3px solid #fff;
     border-radius: 100%;
     color: #fff;
-    height: 140px;
+    height: 160px;
     margin: 0 auto;
     padding-top: 36px;
     position: relative;
     text-align: center;
-    width: 140px;">
+    width: 160px">
 
-                                            <h3 class="product-price" *ngFor="let items of data.price_rate">
+                                            <h5 class="product-price" *ngFor="let items of data.price_rate">
 
                                                 <!-- items -->
                                                 <b> {{items}}</b>
-                                            </h3>
+                                            </h5>
                                         </div>
                                         <!-- </div> -->
                                         <!-- <small>{{data.display_uom}}</small> -->
@@ -78,15 +106,16 @@
 
                                         <!-- <small><b>$69.99 </b></small> -->
                                     </div>
-                                    <div class="col-md-4 col-sm-3 col-xs-7 term">
+                                    <br>
+                                    <div class="col-md-4 col-sm-3 col-xs-7 term" >
 
-                                        <h3>
+                                        <h3 style=" text-align: center">
                                             Call now
                                         </h3>
-                                        <h4>{{data.phone}}</h4>
+                                        <h4 style=" text-align: center">{{data.phone}}</h4>
 
-                                        <button class="btn btn-rose" (click)="openDialog(data.id)">Sign Up
-                                            <i class="material-icons">bubble_chart</i>
+                                        <button class="btn btn-rose" (click)="openDialog(data.id)" style="margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%">Sign Up
+                                            <i class="material-icons" >bubble_chart</i>
                                         </button>
 
                                     </div>
@@ -221,7 +250,13 @@
                             </div>
                         </div>
                     </div>
-                   
+                    <br>
+                    <br>
+                    <ng-template #no_data_templ>
+                        
+                            <!-- <img src="../../assets/img/no_Record.png" style="width: 250px;height:200px" > -->
+                         <h1 style="height:1000px;width:1000px;padding:200px"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No Record Found</b></h1>
+                       </ng-template>
                 </div>
             </div>
             <!-- </div> -->

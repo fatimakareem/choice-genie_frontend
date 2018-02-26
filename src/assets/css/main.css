@@ -795,7 +795,7 @@ background-color: #ffffff;}
       background: -o-linear-gradient(-45deg, #ef5350 0, #880e4f 100%);
       background: -webkit-linear-gradient(135deg, #ef5350 0, #880e4f 100%);
       background: -o-linear-gradient(135deg, #ef5350 0, #880e4f 100%);
-      background: linear-gradient(-45deg, #25B7D3 0, #25B7D3 100%); }
+      background: linear-gradient(-45deg, #25B7D3 0, #214 100%); }
 
 .about-1 {
   background-image: url("../../assets/img/img-03.jpg");
@@ -1164,7 +1164,7 @@ mat-tab-group {
   background: -moz-linear-gradient(-45deg, #ef5350 0, #880e4f 100%);
   background: -ms-linear-gradient(-45deg, #ef5350 0, #880e4f 100%);
   background: -o-linear-gradient(-45deg, #ef5350 0, #880e4f 100%);
-  background: linear-gradient(-45deg, #25B7D3 0, #25B7D3 100%); }
+  background: linear-gradient(-45deg, #25B7D3 0, #214 100%); }
   .member-special .title {
     margin: 0 0 10px !important;
     color: #ffffff; }
