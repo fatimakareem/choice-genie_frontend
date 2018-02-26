@@ -62,7 +62,7 @@ export const AppRoutes: Routes = [
             loadChildren: './signup1/signup1.module#Signup1Module'
         },
           {
-            path: "admin/new-product",
+            path: "new-product",
             loadChildren: './admin/new-product/new-product.module#NewProductModule'
           },
           {

@@ -446,7 +446,8 @@ background-color: #ffffff;}
 
 .in-your-area {
   font-weight: 500;
-  padding: 40px 0; }
+  /* padding: 40px 0; */
+ }
   .in-your-area .col {
     margin-bottom: 25px; }
   .in-your-area img {
@@ -542,8 +543,8 @@ background-color: #ffffff;}
   }
   .desc-banner .card > img {
     margin: 0 0 30px;
-    height: 100px;
-    width: auto;
+    height: 200px;
+    /* width: 200px; */
   }
   .desc-banner .card > div {
     text-align: center;
@@ -571,7 +572,7 @@ background-color: #ffffff;}
 .success-for-business {
   font-size: 18px;
   line-height: 25px;
-  background-image: url("../../assets/img/img-02.jpg");
+  background-image: url("../../assets/img/home-5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: #fefefe;
@@ -603,7 +604,8 @@ background-color: #ffffff;}
     text-align: center;
     min-height: 320px; }
     .success-for-business .icon-box:hover {
-      background: rgba(255, 87, 34, 0.5); }
+      background: rgba(4, 208, 235, 0.5);
+     }
       .success-for-business .icon-box:hover .material-icons {
         color: #fefefe; }
   .success-for-business .material-icons {
