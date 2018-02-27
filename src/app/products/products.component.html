@@ -2,7 +2,7 @@
         List length:
         <input matInput [(ngModel)]="length">
       </mat-form-field>
-      
+
       <mat-form-field>
         Page size:
         <input matInput [(ngModel)]="pageSize">
@@ -13,13 +13,13 @@
                [ngModel]="pageSizeOptions"
                (ngModelChange)="setPageSizeOptions($event)">
       </mat-form-field>
-      
+
       <mat-paginator [length]="length"
                     [pageSize]="pageSize"
                     [pageSizeOptions]="pageSizeOptions"
                     (page)="pageEvent = $event">
       </mat-paginator>
-      
+
       <div *ngIf="pageEvent">
         <h5>Page Change Event Properties</h5>
         <div>List length: {{pageEvent.length}}</div>
@@ -30,236 +30,213 @@
     <!-- <div class="container-fluid"> -->
     <div class="row">
         <div class="col-sm-12">
-            
+
             <div class="page-title">
                 <span>Product Search</span>
-                <br>
-                <div>
-                    <!-- <div class="container">
-    
-    </div> -->
-
-                    <div class="products-area" *ngIf="prod_loaded;else no_data_templ">
-                        <div class="card" *ngFor="let data of sg['products']; let i = index">
-                            <div class="row">
-                               
-                                <div class="col-sm-12">
-                                    <div class="card-header card-header-text" data-background-color="rose">
-
-                                        <h4 class="card-title">{{data.title}} </h4>
-
-                                    </div>
-                                
-                                <div class="card-content">
-                                    <div class="col-md-4  col-sm-3 col-xs-5 plan-detail">
-                                        <a href="{{data.profileurl}}" target="_blank">
-                                            <p>
-
-                                                <img src="{{data.profile_logo}}" style="width: 250px;height:200px" >
-
-                                            </p>
-                                        </a>
-
-                                        <p>
-                                            <img src="{{data.rating_logo}}" >
-                                        </p>
-                                        <!-- <p> -->
-
-                                            <!-- <p>
-    {{data.id}}
-    </p> -->
-
-                                            <!-- <br> <star-rating-comp [size]="'large'" [starType]="'svg'" [rating]="" [(ngModel)]="rating"></star-rating-comp>  -->
-
-                                    </div>
-
-
-
-                                    <div class="col-md-4 col-sm-5 col-xs-5 rate" style="width: 450px">
-                                        <h3 style=" text-align: center">
-                                            Price
-                                        </h3>
-
-                                        <!-- <div class="holder white"> -->
-                                         <div class="product-price" style="
-   background:linear-gradient(-45deg, #25B7D3 0, #214 100%);
-    
-    border: 3px solid #fff;
-    border-radius: 20%;
-    color: #fff;
-    height: 160px;
-    margin: 0 auto;
-    padding-top: 36px;
-    position: relative;
-    text-align: center;
-    width: 160px">
-
-                                            <h5 class="product-price" *ngFor="let items of data.price_rate">
-
-                                                <!-- items -->
-                                                <b> {{items}}</b>
-                                            </h5>
-                                        </div>
-                                        <!-- </div> -->
-                                        <!-- <small>{{data.display_uom}}</small> -->
-                                        <!-- <br /> -->
-
-                                        <!-- <small><b>$69.99 </b></small> -->
-                                    </div>
-                                    <br>
-                                    <div class="col-md-4 col-sm-3 col-xs-7 term" >
-
-                                        <h3 style=" text-align: center">
-                                            Call now
-                                        </h3>
-                                        <h4 style=" text-align: center">{{data.phone}}</h4>
-
-                                        <button class="btn btn-rose" (click)="openDialog(data.id)" style="margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%">Sign Up
-                                            <i class="material-icons" >bubble_chart</i>
-                                        </button>
-
-                                    </div>
-                                    <!-- <div class="col-md-3 col-sm-3 col-xs-7 term top-margin-25">
-    (click)="signUp(data.product_id)"
-    
-    
-    
-    </div> -->
-                                    <div class="col-sm-12">
-                                        <a href="#p-pane-{{i}}" class="view-more collapsed" data-toggle="collapse">
-                                            View more
-                                            <i class="material-icons">arrow_drop_down</i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div id="p-pane-{{i}}" class="panel-details collapse">
-                                <div class="clearfix">
-
-                                    <h3>Plan Information </h3>
-                                    <br>
-                                    <div>
-                                        <p *ngFor="let itemss of data.plan_information">
-                                            {{itemss}}
-                                        </p>
-
-                                    </div>
-
-                                    <h3>
-                                        <b>Cancellation Fee</b>
-                                        <!-- <b>{{data.cancelation_fee}}</b> -->
-
-                                    </h3>
-
-
-
-                                    <h4> {{ data.cancelation_fee}}</h4>
-
-
-
-
-                                    <br>
-                                    <div>
-                                        <div>
-                                            <h3>Plan Document</h3>
-                                            <ul>
-                                                <li style="color:transparent">
-                                                    <a style="color:rgba(0,0,0, 0.87)" href="{{data.terms_of_service}}" target="_blank">
-                                                        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                                        Terms of service
-                                                    </a>
-                                                </li>
-
-                                                <li style="color:transparent">
-                                                    <a style="color:rgba(0,0,0, 0.87)" href="{{data.fact_sheet}}" target="_blank">
-                                                        <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
-                                                        Fact Sheet
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="col-sm-12 col-md-6">
-    <h4>Get your year-pass savings:</h4>
-    <ul>
-    <li>Keep your bills mild when the weather gets wild, and get a low rate in between.*</li>
-    <li>In summer and winter months, see the Season Pass Savings right on your bill.
-    
-    </li>
-    </ul>
-    <h5>Plan Documents</h5>
-    <ul class="list-normal">
-    <li>
-    <a href="{{data.terms_of_service}}" target="_blank">
-    <i class="material-icons">picture_as_pdf</i>
-    Terms of service
-    </a>
-    </li>
-    <li>
-    <a href="#">
-    <i class="material-icons">picture_as_pdf</i>
-    Your rights as a Customer
-    </a>
-    </li>
-    <li>
-    <a href="{{data.fact_sheet}}" target="_blank">
-    <i class="material-icons">picture_as_pdf</i>
-    Fact Sheet
-    </a>
-    </li>
-    </ul>
-    </div> -->
-                                    <div class="col-sm-12 ">
-                                        <h4>Rates Detail:</h4>
-                                        <div class="table">
-                                            <table class="table-normal">
-                                                <thead>
-                                                    <tr>
-                                                        <td>
-                                                            <h1 style="font-size: 25px">Average Monthly Use</h1>
-                                                        </td>
-                                                        <td>
-                                                            <h1 style="font-size: 25px">Average Price per kWh</h1>
-                                                        </td>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody *ngFor="let items of data.price_rate">
-                                                    <tr>
-
-                                                        <td>
-                                                            <h2 style="font-size: 20px">{{ items.split(' ',3000)[0]}} KWH </h2>
-                                                        </td>
-                                                        <td>
-                                                            <h2 style="font-size: 20px"> {{ items.split(' ',3000)[2]}} $</h2>
-                                                        </td>
-                                                        <!-- <td><h4>$ 15.20</h4></td> -->
-                                                    </tr>
-                                                    <!-- <tr>
-    <td><h4>1000 kWh</h4></td>
-    <td><h4>$ 13.60</h4></td>
-    </tr> -->
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <ng-template #no_data_templ>
-                        
-                            <!-- <img src="../../assets/img/no_Record.png" style="width: 250px;height:200px" > -->
-                         <h1 style="height:1000px;width:1000px;padding:200px"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No Record Found</b></h1>
-                       </ng-template>
-                </div>
             </div>
             <!-- </div> -->
+
+          <ng-template #no_data_templ>
+
+            <!-- <img src="../../assets/img/no_Record.png" style="width: 250px;height:200px" > -->
+            <h1 style="height:1000px;width:1000px;padding:200px"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No Record Found</b></h1>
+          </ng-template>
+
+          <div class="products-area" *ngIf="prod_loaded;else no_data_templ">
+            <div class="card" *ngFor="let data of sg['products']; let i = index">
+              <div class="row">
+
+                <div class="col-sm-12">
+                  <div class="card-header card-header-text" data-background-color="rose">
+
+                    <h4 class="card-title">{{data.title}} </h4>
+
+                  </div>
+
+                  <div class="card-content">
+                    <div class="col-md-4  col-sm-3 col-xs-5 plan-detail text-center">
+                      <a href="{{data.profileurl}}" target="_blank">
+                        <img src="{{data.profile_logo}}" />
+                      </a>
+
+                        <img src="{{data.rating_logo}}" />
+                      <!-- <p> -->
+
+                      <!-- <p>
+{{data.id}}
+</p> -->
+
+                      <!-- <br> <star-rating-comp [size]="'large'" [starType]="'svg'" [rating]="" [(ngModel)]="rating"></star-rating-comp>  -->
+
+                    </div>
+
+
+
+                    <div class="col-md-4 col-sm-5 col-xs-5 rate" style="width: 450px">
+                      <h3 style=" text-align: center">
+                        Price
+                      </h3>
+
+                      <!-- <div class="holder white"> -->
+                      <!--class="product-price"-->
+                      <div class="">
+
+                        <h3 *ngFor="let items of data.price_rate" class="text-center">
+                          <b>{{items}}</b>
+                        </h3>
+                      </div>
+                      <!-- </div> -->
+                      <!-- <small>{{data.display_uom}}</small> -->
+                      <!-- <br /> -->
+
+                      <!-- <small><b>$69.99 </b></small> -->
+                    </div>
+                    <br>
+                    <div class="col-md-4 col-sm-3 col-xs-7 term" >
+
+                      <h3 class="text-center">
+                        Call now
+                      </h3>
+                      <h3 class="text-center">{{data.phone}}</h3>
+
+                      <button class="btn btn-rose" (click)="openDialog(data.id)" style="display:block; margin: 0 auto;">Sign Up
+                        <i class="material-icons" >bubble_chart</i>
+                      </button>
+
+                    </div>
+                    <!-- <div class="col-md-3 col-sm-3 col-xs-7 term top-margin-25">
+(click)="signUp(data.product_id)"
+
+
+
+</div> -->
+                    <div class="col-sm-12">
+                      <a href="#p-pane-{{i}}" class="view-more collapsed" data-toggle="collapse">
+                        View more
+                        <i class="material-icons">arrow_drop_down</i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div id="p-pane-{{i}}" class="panel-details collapse">
+                <br />
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h3 style="padding:0 20px;background:#cecece">Plan Information</h3>
+                    <div class="text-justify">
+
+                      <p *ngFor="let itemss of data.plan_information">
+                        {{itemss}}
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <h3 style="padding:0 20px;background:#cecece">
+                      Cancellation Fee
+                      <!-- <b>{{data.cancelation_fee}}</b> -->
+                    </h3>
+                    <h4> {{ data.cancelation_fee}}</h4>
+                    <hr/>
+
+                    <h3 style="padding:0 20px;background:#cecece">Plan Document</h3>
+                    <ul>
+                      <li style="color:transparent">
+                        <a style="color:rgba(0,0,0, 0.87)" href="{{data.terms_of_service}}" target="_blank">
+                          <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                          Terms of service
+                        </a>
+                      </li>
+
+                      <li style="color:transparent">
+                        <a style="color:rgba(0,0,0, 0.87)" href="{{data.fact_sheet}}" target="_blank">
+                          <i style="color:#25B7D3" class="material-icons">picture_as_pdf</i>
+                          Fact Sheet
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <br>
+
+                    <div class="col-sm-12 ">
+
+                    </div>
+
+                <div class="col-sm-12">
+                  <!--<h4>Rates Detail:</h4>-->
+                  <div class="table">
+                    <table class="table-normal">
+                      <thead>
+                      <tr>
+                        <td>
+                          Average Monthly Use
+                        </td>
+                        <td>
+                          Average Price per kWh
+                        </td>
+                      </tr>
+                      </thead>
+
+                      <tbody *ngFor="let items of data.price_rate">
+                      <tr>
+
+                        <td>
+                          <h2 style="font-size: 20px">{{ items.split(' ',3000)[0]}} KWH </h2>
+                        </td>
+                        <td>
+                          <h2 style="font-size: 20px"> {{ items.split(' ',3000)[2]}} $</h2>
+                        </td>
+                        <!-- <td><h4>$ 15.20</h4></td> -->
+                      </tr>
+                      <!-- <tr>
+<td><h4>1000 kWh</h4></td>
+<td><h4>$ 13.60</h4></td>
+</tr> -->
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+
+                </div>
+              </div>
+
+                  <!-- <div class="col-sm-12 col-md-6">
+<h4>Get your year-pass savings:</h4>
+<ul>
+<li>Keep your bills mild when the weather gets wild, and get a low rate in between.*</li>
+<li>In summer and winter months, see the Season Pass Savings right on your bill.
+
+</li>
+</ul>
+<h5>Plan Documents</h5>
+<ul class="list-normal">
+<li>
+<a href="{{data.terms_of_service}}" target="_blank">
+<i class="material-icons">picture_as_pdf</i>
+Terms of service
+</a>
+</li>
+<li>
+<a href="#">
+<i class="material-icons">picture_as_pdf</i>
+Your rights as a Customer
+</a>
+</li>
+<li>
+<a href="{{data.fact_sheet}}" target="_blank">
+<i class="material-icons">picture_as_pdf</i>
+Fact Sheet
+</a>
+</li>
+</ul>
+</div> -->
+
+
+            </div>
+          </div>
 
         </div>
     </div>

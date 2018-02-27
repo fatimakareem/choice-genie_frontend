@@ -329,7 +329,7 @@ opacity: 0.8; }
 .bannerCarousel {
   position: relative;
   overflow: hidden;
-  height: 479px; 
+  height: 479px;
 background-color: #ffffff;}
   .bannerCarousel .banner {
     height: 100%; }
@@ -641,7 +641,7 @@ background: goldenrod;
   width: 100%;
   text-align: center; }
   /* .sidebar .logo img {
-    max-width: 120px; 
+    max-width: 120px;
   } */
 .sidebar.custom {
   -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
@@ -668,6 +668,18 @@ background: goldenrod;
     margin-top: 0 !important;
     padding: 0; }
 
+.product-price {
+  background: linear-gradient(-45deg, #25B7D3 0, #214 100%);
+  border: 3px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  margin: 0 30px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+.product-price > * {
+}
 .products-area {
   font-size: 15px;
   line-height: 19px; }
@@ -678,7 +690,14 @@ background: goldenrod;
     line-height: 22px;
     text-align: justify; }
   .products-area .card {
-    padding: 0 15px 20px; }
+    padding: 0 15px 20px;
+    margin: 15px 0;}
+    .products-area .plan-detail img {
+      width: 170px;
+      height: auto;
+      display: block;
+      margin: 40px auto 0;
+    }
     .products-area .card .card-content {
       overflow: hidden;
       display: -webkit-box;
@@ -693,8 +712,8 @@ background: goldenrod;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
     .products-area .card .rate {
-      border-right: 1px solid #333;
-      border-left: 1px solid #333;
+      border-right: 1px solid #ccc;
+      border-left: 1px solid #ccc;
       min-height: 65px; }
       .products-area .card .rate small {
         font-size: 18px;
@@ -757,16 +776,24 @@ background: goldenrod;
   width: 100%;
   table-layout: fixed; }
   .table-normal thead {
-    background: #25B7D3;
+    /*background: #25B7D3;*/
     font-weight: 500;
-    color: #fefefe; }
+    color: #333;
+
+  background: #cecece;}
+.table-normal thead td {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px;
+}
+
   .table-normal td {
     border: 1px solid #ccc !important;
     padding: 10px; }
 
 .view-more {
-  font-size: 17px;
-  line-height: 21px;
+  font-size: 20px;
+  line-height: 26px;
   display: inline-block;
   vertical-align: middle;
   font-weight: 500;
@@ -1325,28 +1352,28 @@ h3 {
   .new-product-holder .mat-form-field {
     width: 100% !important; }
 
-    
-    
+
+
 /*# sourceMappingURL=main.css.map */
 .terms-container-wrapper {
   background: #ffffff;
   padding-top: 30px;
 }
 
-#myBtn {    
+#myBtn {
   display: block;
   /* display: none;    */
-   position: fixed;    
-   bottom: 5px;  
-   z-index: 99;  
-     right: 10px;  
-       border: none;  
-         outline: none !important;  
-           background-color: #214147; 
-              color: white;  
-                cursor: pointer; 
-                   padding: 10px; 
-                      border-radius: 50%; 
-                         height: 60px !important;  
+   position: fixed;
+   bottom: 5px;
+   z-index: 99;
+     right: 10px;
+       border: none;
+         outline: none !important;
+           background-color: #214147;
+              color: white;
+                cursor: pointer;
+                   padding: 10px;
+                      border-radius: 50%;
+                         height: 60px !important;
                            width: 60px;
 }
