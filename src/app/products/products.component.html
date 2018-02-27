@@ -275,19 +275,19 @@
 
         <!-- pager -->
         <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
-            <li [ngClass]="{disabled:pager.currentPage === 1}">
+            <li [ngClass]="{hide:pager.currentPage === 1}">
                 <a (click)="setPage(1)" class="btn btn-rose">First</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === 1}">
+            <li [ngClass]="{hide:pager.currentPage === 1}">
                 <a (click)="setPage(pager.currentPage - 1)" class="btn btn-rose">Previous</a>
             </li>
             <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
                 <a (click)="setPage(page)" class="btn btn-rose">{{page}}</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+            <li [ngClass]="{hide:pager.currentPage === pager.totalPages}">
                 <a (click)="setPage(pager.currentPage + 1)" class="btn btn-rose" type="Next">Next</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+            <li [ngClass]="{hide:pager.currentPage === pager.totalPages}">
                 <a (click)="setPage(pager.totalPages)" class="btn btn-rose" type="Last">Last</a>
             </li>
         </ul>
