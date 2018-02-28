@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
@@ -8,11 +8,9 @@ import { FormsModule, ReactiveFormsModule, NgForm, FormBuilder, FormGroup, Valid
 import { CommonModule } from '@angular/common';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { SweetAlertService } from 'ng2-sweetalert2';
-// or
-//import { CarouselModule } from 'ngx-bootstrap';
+
 
 import {
-
   MatAutocompleteModule,
   MatButtonModule,
   MatButtonToggleModule,
@@ -44,7 +42,7 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatStepperModule,
- 
+
 } from '@angular/material';
 
 
@@ -76,14 +74,7 @@ import {LoginComponent } from './../app/pages/login/login.component';
 import { LoginService } from './pages/login/login.service';
 import { ResidentialService } from './residential/residential-dialog2/residential.service';
 import { ContactusComponent } from './contactus/contactus.component';
-// import { newProduct } from './admin/new-product/new-product.service';
 
-
-
-//  import { Signup1Component } from './signup1/signup1.component';
-
-// or
-//import { CarouselModule } from 'ngx-bootstrap';
 
 @NgModule({
   exports: [
@@ -120,7 +111,6 @@ import { ContactusComponent } from './contactus/contactus.component';
     MatTooltipModule,
     FormsModule,
     MatFormFieldModule
-   
   ],
   declarations: [RegisteredComponent],
 
@@ -144,10 +134,7 @@ export class MaterialModule {}
     NavbarModule,
     FooterModule,
     Ng2CarouselamosModule,
-    FooterModule, 
-    // Specify your library as an import
-  //  SlickModule.forRoot(),
-    
+    FooterModule,
     CarouselModule.forRoot(),
   ],
   declarations: [
@@ -169,8 +156,6 @@ export class MaterialModule {}
     SweetAlertService,
     LoginService,
 ResidentialService
-    
-    
   ],
   bootstrap: [AppComponent],
   schemas: [
