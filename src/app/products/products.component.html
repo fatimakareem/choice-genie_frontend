@@ -58,8 +58,10 @@
               <div class="card-content">
                 <div class="col-md-4  col-sm-3 col-xs-5 plan-detail text-center">
                   <a href="{{data.profileurl}}" target="_blank">
-                    <img src="{{data.profile_logo}}" />
+                   
+                    <img src="{{data.profile_logo}}" alt="{{data.title}}" />
                   </a>
+                
 
                   <img src="{{data.rating_logo}}" />
                   <!-- <p> -->
@@ -100,9 +102,9 @@
                     Call now
                   </h3>
                   <h3 class="text-center">{{data.phone}}</h3>
-
-                  <button class="btn btn-rose" (click)="openDialog(data.id)" style="display:block; margin: 0 auto;">Sign Up
-                    <i class="material-icons">bubble_chart</i>
+                  <!-- (click)="openDialog(data.id)" -->
+                  <button class="btn btn-rose"  style="display:block; margin: 0 auto;">   <a style=" color: white"  href="{{data.profileurl}}" target="_blank">Sign Up
+  </a>                  <i class="material-icons">bubble_chart</i>
                   </button>
 
                 </div>
@@ -128,10 +130,12 @@
               <div class="col-sm-6">
                 <h3 style="padding:0 20px;background:#cecece">Plan Information</h3>
                 <div class="text-justify">
-
-                  <p *ngFor="let itemss of data.plan_information">
-                    {{itemss}}
-                  </p>
+                    
+                  <div *ngFor="let itemss of data.plan_information">
+                    <ul>
+                      <li>{{itemss}}</li>
+                      </ul>
+                  </div>
                 </div>
               </div>
               <div class="col-sm-6">
