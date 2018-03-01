@@ -156,6 +156,30 @@ cities() {
 
       });
 }
+Email() {
+  // alert(this.premiseID.toString().length)
+  //  alert('hello');
+  console.log("CHOICE GENIE",this.model);
+
+  let headers = new HttpHeaders();
+  headers.append('Content-Type', 'application/json');
+  // this.http.get(Config.api + 'data_against_zipcode/' + this.zip_code + '', { headers: headers }),
+  this.http.put('https:/127.0.0.1:8000/authenticade_code/'+ this.model.state + '',{ headers: headers })
+
+      //  this.http.get(Config.api + 'signup/'+ this.zip_code +'', {headers: headers})
+      .subscribe(Res => {
+          console.log(Res);
+          console.log(this.model);
+          //  this.sQuestion = Res[0].sQuestion;
+          // this.state = Res[0].state;
+         
+
+
+          // this.data.changeProducts(this.sg['products']);
+
+      });
+
+}
   signupuserdata() {
     //alert('hello');
     console.log("CHOICE GENIE",this.model);
