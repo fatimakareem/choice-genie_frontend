@@ -54,6 +54,7 @@ prods_loaded = false;
     { value: 'other-2', viewValue: 'Other' }
   ];
   check(e) {
+    this.fetchitem();
     // this.route.params.subscribe(params => {
     // let headers = new Headers();
     // headers.append('Content-Type', 'application/json');
@@ -81,8 +82,8 @@ prods_loaded = false;
         this.data.changeProducts(this.sg['products']);
         this.allItems = this.sg['products'];
         for (let prod of this.sg['products']) {
-          console.log(prod["plan_information"])
-          console.log(prod["price_rate"])
+          // console.log(prod["plan_information"])
+          // console.log(prod["price_rate"])
           prod["plan_information"] = prod["plan_information"].split(',,', 3000);
           prod["price_rate"] = prod["price_rate"].split('..', 3000);
         }
@@ -105,8 +106,8 @@ prods_loaded = false;
         this.data.changeProducts(this.sg['products']);
         this.allItems = this.sg['products'];
         for (let prod of this.sg['products']) {
-          console.log(prod["plan_information"])
-          console.log(prod["price_rate"])
+          // console.log(prod["plan_information"])
+          // console.log(prod["price_rate"])
           prod["plan_information"] = prod["plan_information"].split(',,', 3000);
           prod["price_rate"] = prod["price_rate"].split('..', 3000);
         }
@@ -129,8 +130,8 @@ prods_loaded = false;
           this.data.changeProducts(this.sg['products']);
           this.allItems = this.sg['products'];
           for (let prod of this.sg['products']) {
-            console.log(prod["plan_information"])
-            console.log(prod["price_rate"])
+            // console.log(prod["plan_information"])
+            // console.log(prod["price_rate"])
             prod["plan_information"] = prod["plan_information"].split(',,', 3000);
             prod["price_rate"] = prod["price_rate"].split('..', 3000);
           }
@@ -152,8 +153,8 @@ prods_loaded = false;
           this.sg['products'] = Res.json()['Results'];
           this.data.changeProducts(this.sg['products']);
           for (let prod of this.sg['products']) {
-            console.log(prod["plan_information"])
-            console.log(prod["price_rate"])
+            // console.log(prod["plan_information"])
+            // console.log(prod["price_rate"])
             prod["plan_information"] = prod["plan_information"].split(',,', 3000);
             prod["price_rate"] = prod["price_rate"].split('..', 3000);
           }
@@ -191,8 +192,8 @@ prods_loaded = false;
             this.data.changeProducts(this.sg['products']);
           this.allItems = this.sg['products'];
           for (let prod of this.sg['products']) {
-            console.log(prod["plan_information"])
-            console.log(prod["price_rate"])
+            // console.log(prod["plan_information"])
+            // console.log(prod["price_rate"])
             prod["plan_information"] = prod["plan_information"].split(',,', 3000);
             prod["price_rate"] = prod["price_rate"].split('..', 3000);
           }

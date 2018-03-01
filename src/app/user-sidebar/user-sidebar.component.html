@@ -4,7 +4,7 @@
     <ul>
       <li>
         <div class="text-center">
-          <button type="button" class="btn btn-rose" (click)="fetchProducts();fetchmonth();fetchrenewable();fetchzip();fetchitem()"> Search <i class="material-icons" title="Use these filters to set your preferences. Get rid of the plans you don’t want to see and only show those that fit your needs.">search</i></button>
+          <button type="button" class="btn btn-rose" (click)="fetchProducts();fetchmonth();fetchrenewable();fetchzip();"> Search <i class="material-icons" title="Use these filters to set your preferences. Get rid of the plans you don’t want to see and only show those that fit your needs.">search</i></button>
         </div>
       </li>
       
@@ -21,9 +21,9 @@
         <h5>Items per Page</h5>
         <mat-form-field >
         <mat-select  (ngModelChange)="check($event)" [(ngModel)]="items"  >
-          <mat-option value="5" style="font-size: 20px">5</mat-option>
-          <mat-option value="10" style="font-size: 20px">10 </mat-option>
+          <mat-option value="10" style="font-size: 20px">10</mat-option>
           <mat-option value="20" style="font-size: 20px">20 </mat-option>
+          <mat-option value="30" style="font-size: 20px">30 </mat-option>
         </mat-select>
         </mat-form-field>
   
