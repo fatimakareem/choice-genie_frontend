@@ -45,11 +45,7 @@
                 
 
                   <img src="{{data.rating_logo}}" />
-                  <!-- <p> -->
-
-                  <!-- <p>
-{{data.id}}
-</p> -->
+             
 
                   <!-- <br> <star-rating-comp [size]="'large'" [starType]="'svg'" [rating]="" [(ngModel)]="rating"></star-rating-comp>  -->
 
@@ -67,7 +63,8 @@
                   <div class="">
 
                     <h3 *ngFor="let items of data.price_rate" class="text-center">
-                      ${{items}}
+                   {{items}}¢
+                 
                     </h3>
                   </div>
                   <!-- </div> -->
@@ -84,13 +81,8 @@
                   </h3>
                   <h3 class="text-center">{{data.phone}}</h3>
                   <!-- (click)="openDialog(data.id)" -->
-<<<<<<< HEAD
-                  <button class="btn btn-rose"  style="display:block; margin: 0 auto;">   <a style=" color: white"  href="{{data.profileurl}}" target="_blank">Sign Up
-  </a>                  <i class="material-icons">bubble_chart</i>
-=======
                   <button class="btn btn-rose" style="display:block; margin: 0 auto;"> <a style="color:white" href="{{data.profileurl}}" target="_blank" >Signup </a>
-                    <i class="material-icons">bubble_chart</i>
->>>>>>> 7c1906b290ebc611f33142c455ac6ef74537d809
+                    <!-- <i class="material-icons">bubble_chart</i> -->
                   </button>
 
                 </div>
@@ -116,12 +108,8 @@
               <div class="col-sm-6">
                 <h3 style="padding:0 20px;background:#cecece">Plan Information</h3>
                 <div class="text-justify">
-                    
-                  <div *ngFor="let itemss of data.plan_information">
-                    <ul>
-                      <li>{{itemss}}</li>
-                      </ul>
-                  </div>
+                    <p  *ngFor="let itemss of data.plan_information">{{itemss}}</p>
+                
                 </div>
               </div>
               <div class="col-sm-6">
@@ -188,7 +176,7 @@
                           <h2 style="font-size: 20px">{{ items.split(' ',3000)[0]}} KWH </h2>
                         </td>
                         <td>
-                          <h2 style="font-size: 20px"> {{ items.split(' ',3000)[2]}} $</h2>
+                          <h2 style="font-size: 20px"> {{ items.split(' ',3000)[2]}}¢</h2>
                         </td>
                         <!-- <td><h4>$ 15.20</h4></td> -->
                       </tr>

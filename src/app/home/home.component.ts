@@ -87,12 +87,7 @@ items;
     }
     ngOnInit() {
         
-        //   $('.carousel').carousel({
-        //     interval: 2000
-        //   });
-        // $('.slick').slick({
-
-        // });
+        
         this.premiseIdData();
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(this.setPosition.bind(this));
@@ -118,6 +113,12 @@ items;
                 //   return JSON.parse(localStorage.getItem("premiseID"))   
                 this.sg['products'] = Res.json()['Results'];
                 this.data.changeProducts(this.sg['products']);
+                for (let prod of this.sg['products']) {
+                    console.log(prod["plan_information"])
+                    console.log(prod["price_rate"])
+                    prod["plan_information"] = prod["plan_information"].split(',,', 3000);
+                    prod["price_rate"] = prod["price_rate"].split('..', 3000);
+                  }
 
                 
                 setTimeout(function(){

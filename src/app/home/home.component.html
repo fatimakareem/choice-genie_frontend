@@ -354,9 +354,19 @@
 
                     <div class="card-body">
                       <h4 class="card-title">{{data.title}}</h4>
+                      
+                      <!-- <h3 *ngFor="let items of data.price_rate" class="text-center">
+                        {{items}}$
+                      </h3> -->
+                      <!-- <p >{{data.plan_information}}</p> -->
+                      <!-- <p   class="card-text" *ngFor="let itemss of data.plan_information">{{itemss}}</p> -->
                       <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                       <!-- <a class="btn btn-primary">Button</a> -->
                     </div>
+                     <!-- <p   class="card-text" *ngFor="let itemss of data.plan_information">{{itemss}}</p> -->
+                    <button class="btn btn-primary" style="display:block; margin: 0 auto; width:250px"> <a style="color:white" href="{{data.profileurl}}" target="_blank" >Signup </a>
+                      <!-- <i class="material-icons">bubble_chart</i> -->
+                    </button>
                     <!-- </div> -->
 
                   </div>

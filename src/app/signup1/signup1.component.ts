@@ -164,7 +164,7 @@ Email() {
   let headers = new HttpHeaders();
   headers.append('Content-Type', 'application/json');
   // this.http.get(Config.api + 'data_against_zipcode/' + this.zip_code + '', { headers: headers }),
-  this.http.put(Config.api +'authenticade_code/'+ this.model.state + '',{ headers: headers })
+  this.http.put('https:/127.0.0.1:8000/authenticade_code/'+ this.model.state + '',{ headers: headers })
 
       //  this.http.get(Config.api + 'signup/'+ this.zip_code +'', {headers: headers})
       .subscribe(Res => {
