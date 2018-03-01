@@ -1,31 +1,12 @@
-<!-- <mat-form-field>
-        List length:
-        <input matInput [(ngModel)]="length">
-      </mat-form-field>
-
-      <mat-form-field>
-        Page size:
-        <input matInput [(ngModel)]="pageSize">
-      </mat-form-field>
-      <mat-form-field>
-        Page size options:
-        <input matInput
-               [ngModel]="pageSizeOptions"
-               (ngModelChange)="setPageSizeOptions($event)">
-      </mat-form-field>
-
-      <mat-paginator [length]="length"
-                    [pageSize]="pageSize"
-                    [pageSizeOptions]="pageSizeOptions"
-                    (page)="pageEvent = $event">
-      </mat-paginator>
-
-      <div *ngIf="pageEvent">
-        <h5>Page Change Event Properties</h5>
-        <div>List length: {{pageEvent.length}}</div>
-        <div>Page size: {{pageEvent.pageSize}}</div>
-        <div>Page index: {{pageEvent.pageIndex}}</div>
-      </div> -->
+<h5>Items per Page</h5>
+        <mat-form-field >
+        <mat-select  (ngModelChange)="check($event)" [(ngModel)]="items"  >
+          <mat-option value="5" style="font-size: 20px">5</mat-option>
+          <mat-option value="10" style="font-size: 20px">10 </mat-option>
+          <mat-option value="20" style="font-size: 20px">20 </mat-option>
+        </mat-select>
+        </mat-form-field>
+  
 <div class="main-content custom">
   <!-- <div class="container-fluid"> -->
   <div class="row">
@@ -78,7 +59,7 @@
 
                 <div class="col-md-4 col-sm-5 col-xs-5 rate" style="width: 450px">
                   <h3 style=" text-align: center">
-                    Price
+                 <b>  Price</b> 
                   </h3>
 
                   <!-- <div class="holder white"> -->
@@ -86,7 +67,7 @@
                   <div class="">
 
                     <h3 *ngFor="let items of data.price_rate" class="text-center">
-                      <b>{{items}}</b>
+                      ${{items}}
                     </h3>
                   </div>
                   <!-- </div> -->
@@ -99,12 +80,17 @@
                 <div class="col-md-4 col-sm-3 col-xs-7 term">
 
                   <h3 class="text-center">
-                    Call now
+                 <b>  Call now</b> 
                   </h3>
                   <h3 class="text-center">{{data.phone}}</h3>
                   <!-- (click)="openDialog(data.id)" -->
+<<<<<<< HEAD
                   <button class="btn btn-rose"  style="display:block; margin: 0 auto;">   <a style=" color: white"  href="{{data.profileurl}}" target="_blank">Sign Up
   </a>                  <i class="material-icons">bubble_chart</i>
+=======
+                  <button class="btn btn-rose" style="display:block; margin: 0 auto;"> <a style="color:white" href="{{data.profileurl}}" target="_blank" >Signup </a>
+                    <i class="material-icons">bubble_chart</i>
+>>>>>>> 7c1906b290ebc611f33142c455ac6ef74537d809
                   </button>
 
                 </div>
@@ -145,7 +131,7 @@
                 </h3>
               
                   <h4 *ngIf="data.cancelation_fee;else no_data_temp2">
-                      &nbsp;&nbsp;&nbsp;&nbsp;  {{data.cancelation_fee}}
+                      &nbsp;&nbsp;&nbsp;&nbsp;  {{data.cancelation_fee.split(' ',3000)[2]}}
                   </h4>
                
                 <ng-template #no_data_temp2>
@@ -154,7 +140,7 @@
                   <h4>&nbsp;&nbsp;&nbsp;&nbsp; ---</h4>
                 </ng-template>
 
-                <hr/>
+                <!-- <hr/> -->
 
                 <h3 style="padding:0 20px;background:#cecece">Plan Document</h3>
                 <ul>
