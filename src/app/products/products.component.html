@@ -31,20 +31,6 @@
 
                 </div>
 
-<<<<<<< HEAD
-                <div class="card-content">
-                  <div class="col-md-4  col-sm-3 col-xs-5 plan-detail text-center">
-                    <a href="{{data.profileurl}}" target="_blank">
-                      <img src="{{data.profile_logo}}" />
-                    </a>
-
-                    <img src="{{data.rating_logo}}" />
-                    <!-- <p> -->
-
-                    <!-- <p>
-{{data.id}}
-</p> -->
-=======
               <div class="card-content">
                 <div class="col-md-4  col-sm-3 col-xs-5 plan-detail text-center">
                   <a href="{{data.profileurl}}" target="_blank">
@@ -55,7 +41,6 @@
 
                   <img src="{{data.rating_logo}}" />
              
->>>>>>> e7c6250ed36c1ad7269f9e7dcab873d602467210
 
                     <!-- <br> <star-rating-comp [size]="'large'" [starType]="'svg'" [rating]="" [(ngModel)]="rating"></star-rating-comp>  -->
 
@@ -72,7 +57,6 @@
                     <!--class="product-price"-->
                     <div class="">
 
-<<<<<<< HEAD
                       <h3 *ngFor="let items of data.price_rate" class="text-center">
                         ${{items}}
                       </h3>
@@ -80,23 +64,12 @@
                     <!-- </div> -->
                     <!-- <small>{{data.display_uom}}</small> -->
                     <!-- <br /> -->
-=======
-                    <h3 *ngFor="let items of data.price_rate" class="text-center">
-                   {{items}}¢
-                 
-                    </h3>
-                  </div>
-                  <!-- </div> -->
-                  <!-- <small>{{data.display_uom}}</small> -->
-                  <!-- <br /> -->
->>>>>>> e7c6250ed36c1ad7269f9e7dcab873d602467210
 
                     <!-- <small><b>$69.99 </b></small> -->
                   </div>
                   <br>
                   <div class="col-md-4 col-sm-3 col-xs-7 term">
 
-<<<<<<< HEAD
                     <h3 class="text-center">
                       <b> Call now</b>
                     </h3>
@@ -106,16 +79,6 @@
                       <a style="color:white" href="{{data.profileurl}}" target="_blank">Signup </a>
                       <i class="material-icons">bubble_chart</i>
                     </button>
-=======
-                  <h3 class="text-center">
-                 <b>  Call now</b> 
-                  </h3>
-                  <h3 class="text-center">{{data.phone}}</h3>
-                  <!-- (click)="openDialog(data.id)" -->
-                  <button class="btn btn-rose" style="display:block; margin: 0 auto;"> <a style="color:white" href="{{data.profileurl}}" target="_blank" >Signup </a>
-                    <!-- <i class="material-icons">bubble_chart</i> -->
-                  </button>
->>>>>>> e7c6250ed36c1ad7269f9e7dcab873d602467210
 
                   </div>
                   <!-- <div class="col-md-3 col-sm-3 col-xs-7 term top-margin-25">
@@ -133,7 +96,6 @@
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             <div class="clearfix"></div>
             <div id="p-pane-{{i}}" class="panel-details collapse">
               <br />
@@ -146,18 +108,6 @@
                       {{itemss}}
                     </p>
                   </div>
-=======
-          </div>
-          <div class="clearfix"></div>
-          <div id="p-pane-{{i}}" class="panel-details collapse">
-            <br />
-            <div class="row">
-              <div class="col-sm-6">
-                <h3 style="padding:0 20px;background:#cecece">Plan Information</h3>
-                <div class="text-justify">
-                    <p  *ngFor="let itemss of data.plan_information">{{itemss}}</p>
-                
->>>>>>> e7c6250ed36c1ad7269f9e7dcab873d602467210
                 </div>
                 <div class="col-sm-6">
                   <h3 style="padding:0 20px;background:#cecece">
@@ -201,7 +151,6 @@
 
                 </div>
 
-<<<<<<< HEAD
                 <div class="col-sm-12">
                   <!--<h4>Rates Detail:</h4>-->
                   <div class="table">
@@ -229,35 +178,6 @@
                           <!-- <td><h4>$ 15.20</h4></td> -->
                         </tr>
                         <!-- <tr>
-=======
-              <div class="col-sm-12">
-                <!--<h4>Rates Detail:</h4>-->
-                <div class="table">
-                  <table class="table-normal">
-                    <thead>
-                      <tr>
-                        <td>
-                          Average Monthly Use
-                        </td>
-                        <td>
-                          Average Price per kWh
-                        </td>
-                      </tr>
-                    </thead>
-
-                    <tbody *ngFor="let items of data.price_rate">
-                      <tr>
-
-                        <td>
-                          <h2 style="font-size: 20px">{{ items.split(' ',3000)[0]}} KWH </h2>
-                        </td>
-                        <td>
-                          <h2 style="font-size: 20px"> {{ items.split(' ',3000)[2]}}¢</h2>
-                        </td>
-                        <!-- <td><h4>$ 15.20</h4></td> -->
-                      </tr>
-                      <!-- <tr>
->>>>>>> e7c6250ed36c1ad7269f9e7dcab873d602467210
 <td><h4>1000 kWh</h4></td>
 <td><h4>$ 13.60</h4></td>
 </tr> -->
@@ -304,16 +224,16 @@ Fact Sheet
 
           </div>
         </div>
-        
-          <ng-template #no_data_templ>
+        <span>
+          <ng-template #no_data_templ  >
 
               <!-- <img src="../../assets/img/no_Record.png" style="width: 250px;height:200px" > -->
               <h1 style="height:1000px;width:1000px;padding:200px">
                 
-                <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No Record Found</b>
+                <!-- <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No Record Found</b> -->
               </h1>
             </ng-template>
-    
+          </span>
      
     </div>
   </div>
