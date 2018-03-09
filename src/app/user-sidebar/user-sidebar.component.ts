@@ -23,6 +23,7 @@ export class UserSidebarComponent implements OnInit {
   cUsage;
   message: string;
   localVar;
+  renewable;
   // min;
   // max;
   // price;

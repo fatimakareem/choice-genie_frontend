@@ -40,6 +40,20 @@
   
       </li>
 
+      <li>
+        <h5>Renewable Energy</h5>
+        <mat-form-field >
+        <mat-select (ngModelChange)="check($event)" [(ngModel)]="renewable"  >
+          <mat-option value="100">100% RENEWABLE</mat-option>
+									<mat-option value="75">76% To 99%</mat-option>
+									<mat-option value="50">51% To 75%</mat-option>
+									<mat-option value="25">26% To 50%</mat-option>
+									<mat-option value="5">0% To 25%</mat-option>
+									<mat-option value="" selected="selected">N/A</mat-option>
+        </mat-select>
+        </mat-form-field>
+  
+      </li>
 
 
 
